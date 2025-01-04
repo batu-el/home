@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add some basic styles to verify CSS is working */
+body {
+    margin: 0;
+    padding: 0;
+}
