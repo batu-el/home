@@ -5,25 +5,50 @@ import { User, Github, Mail, ExternalLink } from 'lucide-react';
 const HomePage = () => {
   const projects = [
     {
-      title: "Project 1",
-      description: "A full-stack web application built with React and Node.js that helps users track their daily habits and goals.",
-      tags: ["Pyhton"]
-    },
-    {
-      title: "Project 2",
-      description: "An AI-powered image recognition tool that can identify and classify different species of plants using computer vision.",
+      title: "Sociotechnical Alignment in Automated Optimization Modeling via Textual Bisection",
+      description: "Udell Lab at Stanford University | Advisor: Madeleine Udell",
       tags: ["Python"]
     },
     {
-      title: "Project 3",
-      description: "A mobile-first weather application that provides real-time weather updates and forecasts based on user location.",
+      title: "Understanding and Improving Representation Learning in the Presence of Shortcuts",
+      description: "MPhil Thesis at the University of Cambridge | Advisors: Andreas Vlachos and Michalis Korakakis",
       tags: ["Pyhton"]
     },
     {
-      title: "Project 4",
-      description: "A blockchain-based voting system that ensures secure and transparent electronic voting.",
+      title: "Different Inductive Biases Can Lead to Similar Performance via Distinct Algorithms",
+      description: "Project for Geometric Deep Learning at the University of Cambridge | Advisor: Chaitanya Joshi",
+      tags: ["Pyhton"]
+    },
+    {
+      title: "Understanding Toy Backdoors via Mechanistic Interpretability",
+      description: "Part of a Project for Theory of Deep Learning at the University of Cambridge",
       tags: ["Python"]
-    }
+    },
+    {
+      title: "Bayesian Optimization for Guided Hypothesis Sampling in Minimum Bayes Risk Decoding",
+      description: "Project for Machine Learning for Language Processing at the University of Cambridge | Advisor: Julius Cheng",
+      tags: ["Python"]
+    },
+    {
+      title: "Comparative Analysis of Stanford U-PCFG and Berkeley Neural Parsers",
+      description: "Project for Introduction to Natural Language Syntax and Parsing at the University of Cambridge",
+      tags: ["Python"]
+    },
+    {
+      title: "Abstractive Summarization of CNN/DailyMail Articles with Encoder-Decoder Transformer",
+      description: "Project for Overview of Natural Language Processing at the University of Cambridge",
+      tags: ["Python"]
+    },
+    {
+      title: "Reserve Management Survey Report 2023: Insights into Public Asset Management",
+      description: "Conducted the data analysis for the 4th Biennial Reserve Management Survey Report at the World Bank | Manager: Eric Bouyé",
+      tags: ["Python"]
+    },
+    {
+      title: "Parameterizing Chains in Generalized Fixed-Point-Free Involutions",
+      description: "Undergraduate Mathematics Thesis at Tulane University | Advisor: Michael Joyce",
+      tags: ["Python"]
+    },
   ];
 
   return (
