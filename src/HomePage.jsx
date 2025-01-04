@@ -42,7 +42,7 @@ const HomePage = () => {
 
           {/* Bio Content */}
           <div className="space-y-6">
-            <h1 className="text-4xl font-bold text-gray-800">John Doe</h1>
+            <h1 className="text-4xl font-bold text-gray-800">Batu El</h1>
             <h2 className="text-2xl text-gray-600">PhD Candidate at Stanford University</h2>
             
             <p className="text-gray-600 leading-relaxed">
