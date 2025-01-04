@@ -7,7 +7,9 @@ const HomePage = () => {
     {
       title: "Sociotechnical Alignment in Automated Optimization Modeling via Textual Bisection",
       description: "Udell Lab at Stanford University | Advisor: Madeleine Udell",
-      tags: ["Python"]
+      tags: ["Python"],
+      githubLink: "https://github.com/example1",
+      paperLink: "https://example.com/paper1"
     },
     {
       title: "Understanding and Improving Representation Learning in the Presence of Shortcuts",
