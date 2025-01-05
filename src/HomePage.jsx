@@ -7,6 +7,7 @@ const HomePage = () => {
     {
     title: "Sociotechnical Alignment in Automated Optimization Modeling via Textual Bisection",
     description: "Udell Lab at Stanford University | Advisor: Madeleine Udell",
+    year: 2024,  
     githubLink: "https://github.com/batu-el/bitextion",
     paperLink: "https://github.com/batu-el/bitextion/blob/main/bitextion_paper.pdf",
     tags: ["Alignment", "Automated Optimization Modeling"],
@@ -14,6 +15,7 @@ const HomePage = () => {
     {
     title: "Understanding and Improving Representation Learning in the Presence of Shortcuts",
     description: "MPhil Thesis at the University of Cambridge | Advisors: Andreas Vlachos and Michalis Korakakis",
+    year: 2024,  
     githubLink: "https://github.com/batu-el/understanding-shortcuts",
     paperLink: "https://github.com/batu-el/understanding-shortcuts/blob/main/paper.pdf",
     presentationLink: "https://github.com/batu-el/understanding-shortcuts/blob/main/presentation.pdf",
@@ -39,31 +41,35 @@ const HomePage = () => {
     description: "Project for Machine Learning for Language Processing at the University of Cambridge | Advisor: Julius Cheng",
     githubLink: "https://github.com/batu-el/guided-hypothesis-sampling",
     paperLink: "https://github.com/batu-el/guided-hypothesis-sampling/blob/main/paper-guided-hypothesis-sampling.pdf",
-    tags: ["Alignment", "Automated Optimization Modeling"],
+    tags: ["Test-time Compute", "Neural Machine Translation", "Bayesian Optimization", "Soft Majority Voting"],
     },
     {
     title: "Comparative Analysis of Stanford U-PCFG and Berkeley Neural Parsers",
     description: "Project for Introduction to Natural Language Syntax and Parsing at the University of Cambridge",
     githubLink: "https://github.com/batu-el/constituency-parser-comparison",
-    paperLink: "https://github.com/batu-el/constituency-parser-comparison/blob/main/paper-comparative-analysis-of-constituency-parsers.pdf"
+    paperLink: "https://github.com/batu-el/constituency-parser-comparison/blob/main/paper-comparative-analysis-of-constituency-parsers.pdf",
+    tags: ["Syntax and Parsing" , "Natural Language Processing",],
     },
     {
     title: "Abstractive Summarization of CNN/DailyMail Articles with Encoder-Decoder Transformer",
     description: "Project for Overview of Natural Language Processing at the University of Cambridge",
     githubLink: "https://github.com/batu-el/extractive-abstractive-summarizer",
-    paperLink: "https://github.com/batu-el/extractive-abstractive-summarizer/blob/main/paper-summarizer.pdf"
+    paperLink: "https://github.com/batu-el/extractive-abstractive-summarizer/blob/main/paper-summarizer.pdf",
+    tags: ["Summarization" , "Encoder-Decoder Transformer",],
     },
     {
     title: "Reserve Management Survey Report 2023: Insights into Public Asset Management",
     description: "I worked on the data analysis for the 4th Biennial Reserve Management Survey Report at the World Bank | Manager: Eric Bouyé",
-    paperLink: "https://openknowledge.worldbank.org/entities/publication/3e23f0dd-7849-4a55-8ce7-2a104bef2c68"
+    paperLink: "https://openknowledge.worldbank.org/entities/publication/3e23f0dd-7849-4a55-8ce7-2a104bef2c68",
+    tags: ["The World Bank", "Public Asset Management" ,"Central Banking" ],
     },
     {
     title: "Parameterizing Chains in Generalized Fixed-Point-Free Involutions",
     description: "Undergraduate Mathematics Thesis at Tulane University | Advisor: Michael Joyce",
     githubLink: "https://github.com/batu-el/parameterizing-chains-in-generalized-involutions",
     presentationLink: "https://github.com/batu-el/parameterizing-chains-in-generalized-involutions/blob/main/HT2-Presentation.pdf",
-    paperLink: "https://library.search.tulane.edu/discovery/delivery/01TUL_INST:Tulane/12433822100006326"
+    paperLink: "https://library.search.tulane.edu/discovery/delivery/01TUL_INST:Tulane/12433822100006326",
+    tags: ["Algebraic Combinatorics", "Involutions"],
     },
   ];
 
