@@ -124,15 +124,18 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Projects */}
-      <h2 className="text-xl font-bold mb-6">Projects</h2>
+{/* Projects */}
+<h2 className="text-xl font-bold mb-6">Projects</h2>
       <div className="space-y-8">
         {projects.map((project, index) => (
           <div key={index} className="border-b pb-6 last:border-b-0">
-            <h3 className="font-semibold mb-2">
-              {project.title}
-            </h3>
-            <p className="text-gray-600 mb-3 text-sm">
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="font-semibold">
+                {project.title}
+              </h3>
+              <span className="text-gray-500 text-sm">{project.year}</span>
+            </div>
+            <p className="text-gray-600 mb-3 text-sm italic">
               {project.description}
             </p>
             <div className="flex flex-wrap gap-2 mb-3">
