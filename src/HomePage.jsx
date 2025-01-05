@@ -18,6 +18,11 @@ const HomePage = () => {
       icon: Twitter,
       href: "https://twitter.com/elb4tu",
       label: "Twitter"
+    },
+    {
+      icon: ExternalLink,
+      href: "https://github.com/batu-el/home/blob/main/batu_el_cv.pdf", // Adjust this path based on where you store your CV
+      label: "CV"
     }
   ];
 
