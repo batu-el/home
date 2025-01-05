@@ -111,7 +111,7 @@ const HomePage = () => {
   );
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6 font-serif">
       {/* Header */}
       <div className="flex flex-col md:flex-row gap-6 mb-12">
         <img
@@ -122,8 +122,6 @@ const HomePage = () => {
         
         <div>
           <h1 className="text-2xl font-bold mb-2">Batu El</h1>
-          <h2 className="text-lg text-gray-600 mb-4">PhD Candidate at Stanford</h2>
-          
           <p className="text-gray-600 mb-4">
             I am a first-year PhD student in Computational and Mathematical Engineering (ICME) at Stanford University and a Knight-Hennessy Scholar. 
             In summer 2024, I graduated with an MPhil in Advanced Computer Science from the University of Cambridge. 
