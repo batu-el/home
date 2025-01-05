@@ -23,78 +23,78 @@ const HomePage = () => {
 
   const projects = [
     {
-    title: "Sociotechnical Alignment in Automated Optimization Modeling via Textual Bisection",
-    description: "Udell Lab at Stanford University | Advisor: Madeleine Udell",
-    year: 2024,  
-    githubLink: "https://github.com/batu-el/bitextion",
-    paperLink: "https://github.com/batu-el/bitextion/blob/main/bitextion_paper.pdf",
-    tags: ["Alignment", "Automated Optimization Modeling"],
+      title: "Sociotechnical Alignment in Automated Optimization Modeling via Textual Bisection",
+      description: "Udell Lab at Stanford University | Advisor: Madeleine Udell",
+      year: 2024,  
+      githubLink: "https://github.com/batu-el/bitextion",
+      paperLink: "https://github.com/batu-el/bitextion/blob/main/bitextion_paper.pdf",
+      tags: ["Alignment", "Automated Optimization Modeling"],
     },
     {
-    title: "Understanding and Improving Representation Learning in the Presence of Shortcuts",
-    description: "MPhil Thesis at the University of Cambridge | Advisors: Andreas Vlachos and Michalis Korakakis",
-    year: 2024,  
-    githubLink: "https://github.com/batu-el/understanding-shortcuts",
-    paperLink: "https://github.com/batu-el/understanding-shortcuts/blob/main/paper.pdf",
-    presentationLink: "https://github.com/batu-el/understanding-shortcuts/blob/main/presentation.pdf",
-    tags: ["Shortcut Learning" , "Mechanistic Interpretability", "Out-of-Distribution Generalization", "Adverserial Robustness"],
+      title: "Understanding and Improving Representation Learning in the Presence of Shortcuts",
+      description: "MPhil Thesis at the University of Cambridge | Advisors: Andreas Vlachos and Michalis Korakakis",
+      year: 2024,  
+      githubLink: "https://github.com/batu-el/understanding-shortcuts",
+      paperLink: "https://github.com/batu-el/understanding-shortcuts/blob/main/paper.pdf",
+      presentationLink: "https://github.com/batu-el/understanding-shortcuts/blob/main/presentation.pdf",
+      tags: ["Shortcut Learning" , "Mechanistic Interpretability", "Out-of-Distribution Generalization", "Adverserial Robustness"],
     },
     {
-    title: "Different Inductive Biases Can Lead to Similar Performance via Distinct Algorithms",
-    description: "Project for Geometric Deep Learning at the University of Cambridge | Advisor: Chaitanya Joshi",
-    year: 2024,  
-    githubLink: "https://github.com/batu-el/understanding-inductive-biases-of-gnns",
-    paperLink: "https://github.com/batu-el/understanding-inductive-biases-of-gnns/blob/main/different_inductive_bias_similar_performance_paper.pdf",
-    presentationLink: "https://github.com/batu-el/understanding-inductive-biases-of-gnns/blob/main/presentation.pdf",
-    tags: ["Graph Neural Networks" , "Interpretability",],
+      title: "Different Inductive Biases Can Lead to Similar Performance via Distinct Algorithms",
+      description: "Project for Geometric Deep Learning at the University of Cambridge | Advisor: Chaitanya Joshi",
+      year: 2024,  
+      githubLink: "https://github.com/batu-el/understanding-inductive-biases-of-gnns",
+      paperLink: "https://github.com/batu-el/understanding-inductive-biases-of-gnns/blob/main/different_inductive_bias_similar_performance_paper.pdf",
+      presentationLink: "https://github.com/batu-el/understanding-inductive-biases-of-gnns/blob/main/presentation.pdf",
+      tags: ["Graph Neural Networks" , "Interpretability"],
     },
     {
-    title: "Understanding Toy Backdoors via Mechanistic Interpretability",
-    description: "Part of a Project for Theory of Deep Learning at the University of Cambridge",
-    year: 2024,  
-    githubLink: "https://github.com/batu-el/understanding-toy-backdoors",
-    paperLink: "https://github.com/batu-el/understanding-toy-backdoors/blob/main/understanding-backdoors.pdf",
-    tags: ["Backdoors" , "Toy Models", "Mechanistic Interpretability", "Adverserial Robustness"],
+      title: "Understanding Toy Backdoors via Mechanistic Interpretability",
+      description: "Part of a Project for Theory of Deep Learning at the University of Cambridge",
+      year: 2024,  
+      githubLink: "https://github.com/batu-el/understanding-toy-backdoors",
+      paperLink: "https://github.com/batu-el/understanding-toy-backdoors/blob/main/understanding-backdoors.pdf",
+      tags: ["Backdoors" , "Toy Models", "Mechanistic Interpretability", "Adverserial Robustness"],
     },
     {
-    title: "Bayesian Optimization for Guided Hypothesis Sampling in Minimum Bayes Risk Decoding",
-    description: "Project for Machine Learning for Language Processing at the University of Cambridge | Advisor: Julius Cheng",
-    year: 2024,  
-    githubLink: "https://github.com/batu-el/guided-hypothesis-sampling",
-    paperLink: "https://github.com/batu-el/guided-hypothesis-sampling/blob/main/paper-guided-hypothesis-sampling.pdf",
-    tags: ["Test-time Compute", "Neural Machine Translation", "Bayesian Optimization", "Soft Majority Voting"],
+      title: "Bayesian Optimization for Guided Hypothesis Sampling in Minimum Bayes Risk Decoding",
+      description: "Project for Machine Learning for Language Processing at the University of Cambridge | Advisor: Julius Cheng",
+      year: 2024,  
+      githubLink: "https://github.com/batu-el/guided-hypothesis-sampling",
+      paperLink: "https://github.com/batu-el/guided-hypothesis-sampling/blob/main/paper-guided-hypothesis-sampling.pdf",
+      tags: ["Test-time Compute", "Neural Machine Translation", "Bayesian Optimization", "Soft Majority Voting"],
     },
     {
-    title: "Comparative Analysis of Stanford U-PCFG and Berkeley Neural Parsers",
-    description: "Project for Introduction to Natural Language Syntax and Parsing at the University of Cambridge",
-    year: 2024,  
-    githubLink: "https://github.com/batu-el/constituency-parser-comparison",
-    paperLink: "https://github.com/batu-el/constituency-parser-comparison/blob/main/paper-comparative-analysis-of-constituency-parsers.pdf",
-    tags: ["Syntax and Parsing" , "Natural Language Processing",],
+      title: "Comparative Analysis of Stanford U-PCFG and Berkeley Neural Parsers",
+      description: "Project for Introduction to Natural Language Syntax and Parsing at the University of Cambridge",
+      year: 2024,  
+      githubLink: "https://github.com/batu-el/constituency-parser-comparison",
+      paperLink: "https://github.com/batu-el/constituency-parser-comparison/blob/main/paper-comparative-analysis-of-constituency-parsers.pdf",
+      tags: ["Syntax and Parsing" , "Natural Language Processing"],
     },
     {
-    title: "Abstractive Summarization of CNN/DailyMail Articles with Encoder-Decoder Transformer",
-    description: "Project for Overview of Natural Language Processing at the University of Cambridge",
-    year: 2023,  
-    githubLink: "https://github.com/batu-el/extractive-abstractive-summarizer",
-    paperLink: "https://github.com/batu-el/extractive-abstractive-summarizer/blob/main/paper-summarizer.pdf",
-    tags: ["Summarization" , "Encoder-Decoder Transformer",],
+      title: "Abstractive Summarization of CNN/DailyMail Articles with Encoder-Decoder Transformer",
+      description: "Project for Overview of Natural Language Processing at the University of Cambridge",
+      year: 2023,  
+      githubLink: "https://github.com/batu-el/extractive-abstractive-summarizer",
+      paperLink: "https://github.com/batu-el/extractive-abstractive-summarizer/blob/main/paper-summarizer.pdf",
+      tags: ["Summarization" , "Encoder-Decoder Transformer"],
     },
     {
-    title: "Reserve Management Survey Report 2023: Insights into Public Asset Management",
-    description: "I worked on the data analysis for the 4th Biennial Reserve Management Survey Report at the World Bank | Manager: Eric Bouyé",
-    year: 2023,  
-    paperLink: "https://openknowledge.worldbank.org/entities/publication/3e23f0dd-7849-4a55-8ce7-2a104bef2c68",
-    tags: ["The World Bank", "Public Asset Management" ,"Central Banking" ],
+      title: "Reserve Management Survey Report 2023: Insights into Public Asset Management",
+      description: "I worked on the data analysis for the 4th Biennial Reserve Management Survey Report at the World Bank | Manager: Eric Bouyé",
+      year: 2023,  
+      paperLink: "https://openknowledge.worldbank.org/entities/publication/3e23f0dd-7849-4a55-8ce7-2a104bef2c68",
+      tags: ["The World Bank", "Public Asset Management" ,"Central Banking"],
     },
     {
-    title: "Parameterizing Chains in Generalized Fixed-Point-Free Involutions",
-    description: "Undergraduate Mathematics Thesis at Tulane University | Advisor: Michael Joyce",
-    year: 2022,  
-    githubLink: "https://github.com/batu-el/parameterizing-chains-in-generalized-involutions",
-    presentationLink: "https://github.com/batu-el/parameterizing-chains-in-generalized-involutions/blob/main/HT2-Presentation.pdf",
-    paperLink: "https://library.search.tulane.edu/discovery/delivery/01TUL_INST:Tulane/12433822100006326",
-    tags: ["Algebraic Combinatorics", "Involutions"],
+      title: "Parameterizing Chains in Generalized Fixed-Point-Free Involutions",
+      description: "Undergraduate Mathematics Thesis at Tulane University | Advisor: Michael Joyce",
+      year: 2022,  
+      githubLink: "https://github.com/batu-el/parameterizing-chains-in-generalized-involutions",
+      presentationLink: "https://github.com/batu-el/parameterizing-chains-in-generalized-involutions/blob/main/HT2-Presentation.pdf",
+      paperLink: "https://library.search.tulane.edu/discovery/delivery/01TUL_INST:Tulane/12433822100006326",
+      tags: ["Algebraic Combinatorics", "Involutions"],
     },
   ];
 
@@ -109,7 +109,6 @@ const HomePage = () => {
       {label}
     </a>
   );
-
 
   return (
     <div className="max-w-4xl mx-auto p-6">
@@ -174,24 +173,24 @@ const HomePage = () => {
               ))}
             </div>
             <div className="flex gap-4">
-              {project.links.github && (
+              {project.githubLink && (
                 <ProjectLink 
                   icon={Github} 
-                  href={project.links.github} 
+                  href={project.githubLink} 
                   label="GitHub" 
                 />
               )}
-              {project.links.paper && (
+              {project.paperLink && (
                 <ProjectLink 
                   icon={ExternalLink} 
-                  href={project.links.paper} 
+                  href={project.paperLink} 
                   label="Paper" 
                 />
               )}
-              {project.links.presentation && (
+              {project.presentationLink && (
                 <ProjectLink 
                   icon={Presentation} 
-                  href={project.links.presentation} 
+                  href={project.presentationLink} 
                   label="Slides" 
                 />
               )}
