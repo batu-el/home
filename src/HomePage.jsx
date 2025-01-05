@@ -96,12 +96,14 @@ const HomePage = () => {
           
           <p className="text-gray-600 mb-4">
             I am a first-year PhD student in Computational and Mathematical Engineering (ICME) at Stanford University and a Knight-Hennessy Scholar. 
-            In summer 2024, I graduated with an MPhil in Advanced Computer Science from the University of Cambridge.
+            In summer 2024, I graduated with an MPhil in Advanced Computer Science from the University of Cambridge. 
+            Previously, I worked as a Junior Analyst at the World Bank and co-founded <a href="https://www.chember.co/">Chember</a>, a social platform that connects basketball enthusiasts.
+            I hold an undergraduate degree from Tulane University with majors in mathematics, computer science, and economics. 
           </p>
 
           <div className="flex gap-4 mb-4">
             <a 
-                href="https://github.com/cbayl" 
+                href="https://github.com/batu-el" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-600 hover:text-black"
@@ -109,7 +111,7 @@ const HomePage = () => {
                 <Github className="w-5 h-5" />
             </a>
             <a 
-                href="https://www.linkedin.com/in/bailey-chen-87647b291/" 
+                href="https://www.linkedin.com/in/batu-el/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-600 hover:text-black"
@@ -117,24 +119,13 @@ const HomePage = () => {
                 <ExternalLink className="w-5 h-5" />
             </a>
             <a 
-                href="https://twitter.com/baileychen2003" 
+                href="https://twitter.com/elb4tu" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-black"
             >
                 <Twitter className="w-5 h-5" />
             </a>
-          </div>
-
-          <div>
-            {['React', 'Node.js', 'TypeScript', 'Python', 'AWS', 'Docker'].map((skill) => (
-              <span
-                key={skill}
-                className="inline-block mr-2 mb-2 px-2 py-1 bg-gray-100 text-sm rounded"
-              >
-                {skill}
-              </span>
-            ))}
           </div>
         </div>
       </div>
