@@ -3,6 +3,24 @@ import { Github, Twitter, ExternalLink, Presentation, Linkedin } from 'lucide-re
 import profilePic from './assets/profile.jpg';
 
 const HomePage = () => {
+  const socialLinks = [
+    {
+      icon: Github,
+      href: "https://github.com/batu-el",
+      label: "GitHub"
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/batu-el/",
+      label: "LinkedIn"
+    },
+    {
+      icon: Twitter,
+      href: "https://twitter.com/elb4tu",
+      label: "Twitter"
+    }
+  ];
+
   const projects = [
     {
     title: "Sociotechnical Alignment in Automated Optimization Modeling via Textual Bisection",
@@ -80,6 +98,19 @@ const HomePage = () => {
     },
   ];
 
+  const ProjectLink = ({ icon: Icon, href, label }) => (
+    <a 
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-600 hover:text-black text-sm flex items-center gap-1"
+    >
+      <Icon className="w-4 h-4" />
+      {label}
+    </a>
+  );
+
+
   return (
     <div className="max-w-4xl mx-auto p-6">
       {/* Header */}
@@ -97,104 +128,72 @@ const HomePage = () => {
           <p className="text-gray-600 mb-4">
             I am a first-year PhD student in Computational and Mathematical Engineering (ICME) at Stanford University and a Knight-Hennessy Scholar. 
             In summer 2024, I graduated with an MPhil in Advanced Computer Science from the University of Cambridge. 
-            Previously, I worked as a Junior Analyst at the World Bank and co-founded <a href="https://www.chember.co/">Chember</a>, a social platform that connects basketball enthusiasts.
+            Previously, I worked as a Junior Analyst at the World Bank and co-founded <a href="https://www.chember.co/" className="text-blue-600 hover:text-blue-800">Chember</a>, a social platform that connects basketball enthusiasts.
             I hold an undergraduate degree from Tulane University with majors in mathematics, computer science, and economics. 
           </p>
 
           <div className="flex gap-4 mb-4">
-            <a 
-                href="https://github.com/batu-el" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-gray-600 hover:text-black"
-            >
-                <Github className="w-5 h-5" />
-            </a>
-            <a 
-                href="https://www.linkedin.com/in/batu-el/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-gray-600 hover:text-black"
-            >
-                <ExternalLink className="w-5 h-5" />
-            </a>
-            <a 
-                href="https://twitter.com/elb4tu" 
+            {socialLinks.map((link, index) => (
+              <a 
+                key={index}
+                href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-black"
-            >
-                <Twitter className="w-5 h-5" />
-            </a>
+                aria-label={link.label}
+              >
+                <link.icon className="w-5 h-5" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
 
-{/* Projects */}
-<h2 className="text-xl font-bold mb-6">Projects</h2>
+      {/* Projects */}
+      <h2 className="text-xl font-bold mb-6">Projects</h2>
       <div className="space-y-8">
         {projects.map((project, index) => (
           <div key={index} className="border-b pb-6 last:border-b-0">
-            <div className="flex justify-between items-center mb-2">
+            <div className="flex justify-between items-start mb-2">
               <h3 className="font-semibold">
                 {project.title}
               </h3>
-              <span className="text-gray-500 text-sm">{project.year}</span>
+              <span className="text-gray-500 text-sm shrink-0 ml-4">{project.year}</span>
             </div>
             <p className="text-gray-600 mb-3 text-sm italic">
               {project.description}
             </p>
             <div className="flex flex-wrap gap-2 mb-3">
-              {project.tags && project.tags.map((tag, tagIndex) => (
+              {project.tags.map((tag, tagIndex) => (
                 <span
-                  key={`tag-${tagIndex}`}
+                  key={tagIndex}
                   className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded"
                 >
                   {tag}
                 </span>
               ))}
-              {project.keywords && project.keywords.map((keyword, keywordIndex) => (
-                <span
-                  key={`keyword-${keywordIndex}`}
-                  className="px-2 py-1 bg-blue-50 text-blue-600 text-sm rounded"
-                >
-                  {keyword}
-                </span>
-              ))}
             </div>
             <div className="flex gap-4">
-              {project.githubLink && (
-                <a 
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-black text-sm flex items-center gap-1"
-                >
-                  <Github className="w-4 h-4" />
-                  GitHub
-                </a>
+              {project.links.github && (
+                <ProjectLink 
+                  icon={Github} 
+                  href={project.links.github} 
+                  label="GitHub" 
+                />
               )}
-              {project.paperLink && (
-                <a 
-                  href={project.paperLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-black text-sm flex items-center gap-1"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  Paper
-                </a>
+              {project.links.paper && (
+                <ProjectLink 
+                  icon={ExternalLink} 
+                  href={project.links.paper} 
+                  label="Paper" 
+                />
               )}
-              {project.presentationLink && (
-                <a 
-                  href={project.presentationLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-black text-sm flex items-center gap-1"
-                >
-                  <Presentation className="w-4 h-4" />
-                  Slides
-                </a>
+              {project.links.presentation && (
+                <ProjectLink 
+                  icon={Presentation} 
+                  href={project.links.presentation} 
+                  label="Slides" 
+                />
               )}
             </div>
           </div>
