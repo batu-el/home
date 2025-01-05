@@ -100,14 +100,29 @@ const HomePage = () => {
           </p>
 
           <div className="flex gap-4 mb-4">
-            <a href="#" className="text-gray-600 hover:text-black">
-              <Github className="w-5 h-5" />
+            <a 
+                href="https://github.com/cbayl" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-600 hover:text-black"
+            >
+                <Github className="w-5 h-5" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-black">
-              <ExternalLink className="w-5 h-5" />
+            <a 
+                href="https://www.linkedin.com/in/bailey-chen-87647b291/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-600 hover:text-black"
+            >
+                <ExternalLink className="w-5 h-5" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-black">
-              <Mail className="w-5 h-5" />
+            <a 
+                href="https://twitter.com/baileychen2003" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-black"
+            >
+                <Twitter className="w-5 h-5" />
             </a>
           </div>
 
