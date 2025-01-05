@@ -1,6 +1,6 @@
 import React from 'react';
 import { Github, Mail, ExternalLink, Presentation } from 'lucide-react';
-import profilePic from './assets/profile.jpg';
+import profilePic from './assets/profile.jpg'
 
 const HomePage = () => {
   const projects = [
@@ -72,7 +72,7 @@ const HomePage = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row gap-6 mb-12">
         <img
-          src={profilePic}
+          src="/profile.jpg"
           onError={(e) => {
             console.error('Image failed to load:', e);
             e.target.src = '/api/placeholder/400/300'; // Fallback image
@@ -127,7 +127,7 @@ const HomePage = () => {
               {project.description}
             </p>
             <div className="flex flex-wrap gap-2 mb-3">
-              {project.tags.map((tag, tagIndex) => (
+              {project.tags && project.tags.map((tag, tagIndex) => (
                 <span
                   key={`tag-${tagIndex}`}
                   className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded"
@@ -135,7 +135,7 @@ const HomePage = () => {
                   {tag}
                 </span>
               ))}
-              {project.keywords.map((keyword, keywordIndex) => (
+              {project.keywords && project.keywords.map((keyword, keywordIndex) => (
                 <span
                   key={`keyword-${keywordIndex}`}
                   className="px-2 py-1 bg-blue-50 text-blue-600 text-sm rounded"
