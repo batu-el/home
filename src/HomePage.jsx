@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Mail, ExternalLink, Presentation } from 'lucide-react';
+import profilePic from './assets/profile.jpg';
 
 const HomePage = () => {
   const projects = [
@@ -71,7 +72,11 @@ const HomePage = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row gap-6 mb-12">
         <img
-          src="/api/placeholder/400/300"
+          src={profilePic}
+          onError={(e) => {
+            console.error('Image failed to load:', e);
+            e.target.src = '/api/placeholder/400/300'; // Fallback image
+          }}
           alt="Profile"
           className="w-64 h-48 object-cover rounded"
         />
@@ -121,6 +126,24 @@ const HomePage = () => {
             <p className="text-gray-600 mb-3 text-sm">
               {project.description}
             </p>
+            <div className="flex flex-wrap gap-2 mb-3">
+              {project.tags.map((tag, tagIndex) => (
+                <span
+                  key={`tag-${tagIndex}`}
+                  className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded"
+                >
+                  {tag}
+                </span>
+              ))}
+              {project.keywords.map((keyword, keywordIndex) => (
+                <span
+                  key={`keyword-${keywordIndex}`}
+                  className="px-2 py-1 bg-blue-50 text-blue-600 text-sm rounded"
+                >
+                  {keyword}
+                </span>
+              ))}
+            </div>
             <div className="flex gap-4">
               {project.githubLink && (
                 <a 
@@ -142,6 +165,17 @@ const HomePage = () => {
                 >
                   <ExternalLink className="w-4 h-4" />
                   Paper
+                </a>
+              )}
+              {project.presentationLink && (
+                <a 
+                  href={project.presentationLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-black text-sm flex items-center gap-1"
+                >
+                  <Presentation className="w-4 h-4" />
+                  Slides
                 </a>
               )}
             </div>
