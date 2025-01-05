@@ -1,6 +1,6 @@
 import React from 'react';
 import { Github, Mail, ExternalLink, Presentation } from 'lucide-react';
-import profilePic from './assets/profile.jpg'
+import profilePic from './assets/profile.jpg';
 
 const HomePage = () => {
   const projects = [
@@ -24,6 +24,7 @@ const HomePage = () => {
     {
     title: "Different Inductive Biases Can Lead to Similar Performance via Distinct Algorithms",
     description: "Project for Geometric Deep Learning at the University of Cambridge | Advisor: Chaitanya Joshi",
+    year: 2024,  
     githubLink: "https://github.com/batu-el/understanding-inductive-biases-of-gnns",
     paperLink: "https://github.com/batu-el/understanding-inductive-biases-of-gnns/blob/main/different_inductive_bias_similar_performance_paper.pdf",
     presentationLink: "https://github.com/batu-el/understanding-inductive-biases-of-gnns/blob/main/presentation.pdf",
@@ -32,6 +33,7 @@ const HomePage = () => {
     {
     title: "Understanding Toy Backdoors via Mechanistic Interpretability",
     description: "Part of a Project for Theory of Deep Learning at the University of Cambridge",
+    year: 2024,  
     githubLink: "https://github.com/batu-el/understanding-toy-backdoors",
     paperLink: "https://github.com/batu-el/understanding-toy-backdoors/blob/main/understanding-backdoors.pdf",
     tags: ["Backdoors" , "Toy Models", "Mechanistic Interpretability", "Adverserial Robustness"],
@@ -39,6 +41,7 @@ const HomePage = () => {
     {
     title: "Bayesian Optimization for Guided Hypothesis Sampling in Minimum Bayes Risk Decoding",
     description: "Project for Machine Learning for Language Processing at the University of Cambridge | Advisor: Julius Cheng",
+    year: 2024,  
     githubLink: "https://github.com/batu-el/guided-hypothesis-sampling",
     paperLink: "https://github.com/batu-el/guided-hypothesis-sampling/blob/main/paper-guided-hypothesis-sampling.pdf",
     tags: ["Test-time Compute", "Neural Machine Translation", "Bayesian Optimization", "Soft Majority Voting"],
@@ -46,6 +49,7 @@ const HomePage = () => {
     {
     title: "Comparative Analysis of Stanford U-PCFG and Berkeley Neural Parsers",
     description: "Project for Introduction to Natural Language Syntax and Parsing at the University of Cambridge",
+    year: 2024,  
     githubLink: "https://github.com/batu-el/constituency-parser-comparison",
     paperLink: "https://github.com/batu-el/constituency-parser-comparison/blob/main/paper-comparative-analysis-of-constituency-parsers.pdf",
     tags: ["Syntax and Parsing" , "Natural Language Processing",],
@@ -53,6 +57,7 @@ const HomePage = () => {
     {
     title: "Abstractive Summarization of CNN/DailyMail Articles with Encoder-Decoder Transformer",
     description: "Project for Overview of Natural Language Processing at the University of Cambridge",
+    year: 2023,  
     githubLink: "https://github.com/batu-el/extractive-abstractive-summarizer",
     paperLink: "https://github.com/batu-el/extractive-abstractive-summarizer/blob/main/paper-summarizer.pdf",
     tags: ["Summarization" , "Encoder-Decoder Transformer",],
@@ -60,12 +65,14 @@ const HomePage = () => {
     {
     title: "Reserve Management Survey Report 2023: Insights into Public Asset Management",
     description: "I worked on the data analysis for the 4th Biennial Reserve Management Survey Report at the World Bank | Manager: Eric Bouyé",
+    year: 2023,  
     paperLink: "https://openknowledge.worldbank.org/entities/publication/3e23f0dd-7849-4a55-8ce7-2a104bef2c68",
     tags: ["The World Bank", "Public Asset Management" ,"Central Banking" ],
     },
     {
     title: "Parameterizing Chains in Generalized Fixed-Point-Free Involutions",
     description: "Undergraduate Mathematics Thesis at Tulane University | Advisor: Michael Joyce",
+    year: 2022,  
     githubLink: "https://github.com/batu-el/parameterizing-chains-in-generalized-involutions",
     presentationLink: "https://github.com/batu-el/parameterizing-chains-in-generalized-involutions/blob/main/HT2-Presentation.pdf",
     paperLink: "https://library.search.tulane.edu/discovery/delivery/01TUL_INST:Tulane/12433822100006326",
@@ -78,11 +85,7 @@ const HomePage = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row gap-6 mb-12">
         <img
-          src="/profile.jpg"
-          onError={(e) => {
-            console.error('Image failed to load:', e);
-            e.target.src = '/api/placeholder/400/300'; // Fallback image
-          }}
+          src={profilePic}
           alt="Profile"
           className="w-64 h-48 object-cover rounded"
         />
