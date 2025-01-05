@@ -1,7 +1,7 @@
 import React from 'react';
 // Verify lucide-react is installed and imported correctly
 import { User, Github, Mail, ExternalLink } from 'lucide-react';
-// import profilePic from './assets/profile.jpg';
+import profilePic from './assets/profile.jpg';
 
 const HomePage = () => {
   const projects = [
@@ -53,94 +53,88 @@ const HomePage = () => {
       tags: ["Python"]
     },
   ];
-
+  
   return (
-    <div className="h-screen flex bg-white">
-      {/* Left Section - Bio */}
-      <div className="w-1/2 h-screen overflow-y-auto p-8 bg-white">
-        <div className="max-w-md mx-auto">
-          {/* Profile Image */}
-          <div className="mb-8">
-            <img
-              src="/api/placeholder/400/400"
-              alt="Profile"
-              className="rounded-full w-48 h-48 object-cover mx-auto shadow-lg"
-            />
+    <div className="max-w-4xl mx-auto p-6">
+      {/* Header */}
+      <div className="flex flex-col md:flex-row gap-6 mb-12">
+        <img
+          src={profilePic}
+          alt="Profile"
+          className="w-64 h-48 object-cover rounded"
+        />
+        
+        <div>
+          <h1 className="text-2xl font-bold mb-2">Batu El</h1>
+          <h2 className="text-lg text-gray-600 mb-4">PhD Candidate at Stanford</h2>
+          
+          <p className="text-gray-600 mb-4">
+            I am a first-year PhD student in Computational and Mathematical Engineering (ICME) at Stanford University and a Knight-Hennessy Scholar. 
+            In summer 2024, I graduated with an MPhil in Advanced Computer Science from the University of Cambridge.
+          </p>
+
+          <div className="flex gap-4 mb-4">
+            <a href="#" className="text-gray-600 hover:text-black">
+              <Github className="w-5 h-5" />
+            </a>
+            <a href="#" className="text-gray-600 hover:text-black">
+              <ExternalLink className="w-5 h-5" />
+            </a>
+            <a href="#" className="text-gray-600 hover:text-black">
+              <Mail className="w-5 h-5" />
+            </a>
           </div>
 
-          {/* Bio Content */}
-          <div className="space-y-6">
-            <h1 className="text-4xl font-bold text-gray-800">Batu El</h1>
-            <h2 className="text-2xl text-gray-600">PhD Candidate at Stanford University</h2>
-            
-            <p className="text-gray-600 leading-relaxed">
-            I am a first-year PhD student in Computational and Mathematical Engineering (ICME) at Stanford University and a Knight-Hennessy Scholar. In summer 2024, I graduated with an MPhil in Advanced Computer Science from the University of Cambridge, where I focused on out-of-distribution generalization and interpretability of language models.
-            My MPhil thesis, advised by Professor Andreas Vlachos and Dr. Michalis Korakakis, was on understanding and improving representation learning in the presence of shortcuts. Previously, I worked as a Junior Analyst at the World Bank, where I was the Vice President of the World Bank and IMF Turkish Staff Association.
-            I got my undergraduate degree from Tulane University as the medalist of the Class of 2022 with majors in Mathematics, Computer Science, and Economics. For my thesis in Mathematics, I proved a theorem in algebraic combinatorics on parameterizing chains in generalized fixed-point-free involutions. In my thesis in Computer Science and Economics, I investigated how artificial intelligence can assist hiring managers to detect and reduce age discrimination during resume screening.
-            In 2020, I co-founded Chember, a social platform that connects basketball enthusiasts. You can download our mobile app that now has over ~30,000 users from App Store or Google Play Store, and watch my crossover in our promotional video. You can check out the summary of my experiences on my resume. 
-            </p>
-
-            {/* Social Links */}
-            <div className="flex space-x-4 text-gray-600">
-              <a href="#" className="hover:text-gray-800 transition-colors">
-                <Github className="w-6 h-6" />
-              </a>
-              <a href="#" className="hover:text-gray-800 transition-colors">
-                <ExternalLink className="w-6 h-6" />
-              </a>
-              <a href="#" className="hover:text-gray-800 transition-colors">
-                <Mail className="w-6 h-6" />
-              </a>
-            </div>
-
-            {/* Skills */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-gray-800">Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                {['React', 'Node.js', 'TypeScript', 'Python', 'AWS', 'Docker'].map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+          <div>
+            {['React', 'Node.js', 'TypeScript', 'Python', 'AWS', 'Docker'].map((skill) => (
+              <span
+                key={skill}
+                className="inline-block mr-2 mb-2 px-2 py-1 bg-gray-100 text-sm rounded"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Right Section - Projects */}
-      <div className="w-1/2 h-screen overflow-y-auto p-8 bg-gray-50">
-        <div className="max-w-md mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">Projects</h2>
-          <div className="space-y-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-              >
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 bg-gray-100 text-gray-600 rounded-md text-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
+      {/* Projects */}
+      <h2 className="text-xl font-bold mb-6">Projects</h2>
+      <div className="space-y-8">
+        {projects.map((project, index) => (
+          <div key={index} className="border-b pb-6 last:border-b-0">
+            <h3 className="font-semibold mb-2">
+              {project.title}
+            </h3>
+            <p className="text-gray-600 mb-3 text-sm">
+              {project.description}
+            </p>
+            <div className="flex gap-4">
+              {project.githubLink && (
+                <a 
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-black text-sm flex items-center gap-1"
+                >
+                  <Github className="w-4 h-4" />
+                  GitHub
+                </a>
+              )}
+              {project.paperLink && (
+                <a 
+                  href={project.paperLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-black text-sm flex items-center gap-1"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Paper
+                </a>
+              )}
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
