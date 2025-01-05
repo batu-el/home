@@ -128,11 +128,11 @@ const HomePage = () => {
         <div>
           <h1 className="text-2xl font-bold mb-2">Batu El</h1>
           <p className="text-gray-600 mb-4">
-            I am a first-year PhD student in Computational and Mathematical Engineering (ICME) at Stanford University and a Knight-Hennessy Scholar. 
+            I am a first-year PhD student in Computational and Mathematical Engineering (ICME) at Stanford University and a Knight-Hennessy Scholar.
             In summer 2024, I graduated with an MPhil in Advanced Computer Science from the University of Cambridge. 
-            Previously, I worked as a Junior Analyst at the World Bank and co-founded <a href="https://www.chember.co/" className="text-blue-600 hover:text-blue-800">Chember</a>, a social platform that connects basketball enthusiasts.
-            I hold an undergraduate degree from Tulane University with majors in mathematics, computer science, and economics. 
-          </p>
+            Previously, I worked as a <a href="https://treasury.worldbank.org/en/about/unit/treasury/about/student-and-graduate-careers" className="text-blue-600 hover:text-blue-800">Junior Analyst</a> at the World Bank and co-founded <a href="https://www.chember.co/" className="text-blue-600 hover:text-blue-800">Chember</a>, a social platform that connects basketball enthusiasts.
+            I hold an <a href="https://college.tulane.edu/newcomb-tulane-college-announces-class-2022-william-wallace-peery-society" className="text-blue-600 hover:text-blue-800">undergraduate degree</a> from Tulane University with majors in mathematics, computer science, and economics. 
+          </p> 
 
           <div className="flex gap-4 mb-4">
             {socialLinks.map((link, index) => (
