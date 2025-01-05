@@ -37,7 +37,8 @@ const HomePage = () => {
     title: "Bayesian Optimization for Guided Hypothesis Sampling in Minimum Bayes Risk Decoding",
     description: "Project for Machine Learning for Language Processing at the University of Cambridge | Advisor: Julius Cheng",
     githubLink: "https://github.com/batu-el/guided-hypothesis-sampling",
-    paperLink: "https://github.com/batu-el/guided-hypothesis-sampling/blob/main/paper-guided-hypothesis-sampling.pdf"
+    paperLink: "https://github.com/batu-el/guided-hypothesis-sampling/blob/main/paper-guided-hypothesis-sampling.pdf",
+    tags: ["Alignment", "Automated Optimization Modeling"],
     },
     {
     title: "Comparative Analysis of Stanford U-PCFG and Berkeley Neural Parsers",
