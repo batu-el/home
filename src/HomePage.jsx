@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Mail, ExternalLink, Presentation } from 'lucide-react';
+import { Github, Twitter, ExternalLink, Presentation, Linkedin } from 'lucide-react';
 import profilePic from './assets/profile.jpg';
 
 const HomePage = () => {
