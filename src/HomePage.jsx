@@ -125,7 +125,7 @@ const HomePage = () => {
             I hold an MPhil in Advanced Computer Science from the University of Cambridge (advised by <a href="https://andreasvlachos.github.io/" className="text-blue-600 hover:text-blue-800">Andreas Vlachos</a>), and an 
             <a href="https://college.tulane.edu/newcomb-tulane-college-announces-class-2022-william-wallace-peery-society" className="text-blue-600 hover:text-blue-800"> undergraduate degree</a> from Tulane University with majors in mathematics, computer science, and economics.
             I previously worked at the World Bank. I am currently the president of the 
-            <a href="https://stanford-turkish-student-association.github.io/turks-in-ai-forum/" className="text-blue-600 hover:text-blue-800"> Stanfurd Turkish Student Association</a>.
+            <a href="https://stanford-turkish-student-association.github.io/turks-in-ai-forum/" className="text-blue-600 hover:text-blue-800"> Stanford Turkish Student Association</a>.
           </p> 
 
           <div className="flex gap-4 mb-4">
