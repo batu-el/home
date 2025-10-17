@@ -60,6 +60,7 @@ const HomePage = () => {
       authors: "Batu El, Deepro Choudhury, Pietro Liò, Chaitanya K. Joshi",
       githubLink: "https://github.com/batu-el/understanding-inductive-biases-of-gnns",
       paperLink: "https://arxiv.org/abs/2502.12352",
+      posterLink: "/assets/towards-mechanistic.pdf",
       tags: ["ICLR 2025 Workshop XAI4Science"]
     },
     {
