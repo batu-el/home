@@ -43,7 +43,7 @@ const HomePage = () => {
       authors: "Batu El, Mert Yuksekgonul, James Zou",
       githubLink: "https://github.com/batu-el/meta-agent-inefficiency",
       paperLink: "https://arxiv.org/abs/2510.06711",
-      posterLink: "https://batu-el.github.io/home/assets/emnlp-poster.png",
+      posterLink: "https://batu-el.github.io/home/src/assets/emnlp-poster.png",
       tags: ["EMNLP 2025 Findings", "ICML 2025 PRAL Workshop"]
     },
     {
@@ -60,7 +60,7 @@ const HomePage = () => {
       authors: "Batu El, Deepro Choudhury, Pietro Liò, Chaitanya K. Joshi",
       githubLink: "https://github.com/batu-el/understanding-inductive-biases-of-gnns",
       paperLink: "https://arxiv.org/abs/2502.12352",
-      posterLink: "https://batu-el.github.io/home/assets/towards-mechanistic.pdf",
+      posterLink: "https://batu-el.github.io/home/src/assets/towards-mechanistic.pdf",
       tags: ["ICLR 2025 Workshop XAI4Science"]
     },
     {
