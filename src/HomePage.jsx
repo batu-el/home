@@ -43,6 +43,7 @@ const HomePage = () => {
       authors: "Batu El, Mert Yuksekgonul, James Zou",
       githubLink: "https://github.com/batu-el/meta-agent-inefficiency",
       paperLink: "https://arxiv.org/abs/2510.06711",
+      posterLink: "/assets/emnlp-poster.png",
       tags: ["EMNLP 2025 Findings", "ICML 2025 PRAL Workshop"]
     },
     {
@@ -196,6 +197,16 @@ const HomePage = () => {
                   className="text-black hover:text-black text-sm flex items-center gap-1"
                 >
                   Slides
+                </a>
+              )}
+              {project.posterLink && (
+                <a 
+                  href={project.posterLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black hover:text-black text-sm flex items-center gap-1"
+                >
+                  Poster
                 </a>
               )}
               {project.githubLink && (
