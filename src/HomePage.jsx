@@ -147,8 +147,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Research Interests */}
-      <h2 className="text-xl font-bold mb-4 text-black">Research Interests</h2>
+      {/* Research Interest */}
+      <h2 className="text-xl font-bold mb-4 text-black">Research Interest</h2>
       <p className="text-black mb-8">
         I am interested in understanding and improving the dynamics of AI agent interactions.
       </p>
