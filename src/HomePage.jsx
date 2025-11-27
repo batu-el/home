@@ -147,6 +147,21 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* Research Interests */}
+      <h2 className="text-xl font-bold mb-4 text-black">Research Interests</h2>
+      <p className="text-black mb-8">
+        I am interested in understanding and improving (1) the neurology of generative agents and (2) the dynamics of AI agent interactions.
+      </p>
+
+      {/* Current Work */}
+      <h2 className="text-xl font-bold mb-4 text-black">Current Work</h2>
+      <ul className="list-disc list-inside text-black mb-8 space-y-2">
+        <li>intelligence khollective under Knight-Hennessy Scholarship</li>
+        <li>cognitive security task force under Stanford HAI</li>
+        {/* <li>human security project under Hoover Institute</li> */}
+        <li>stanford turkish student association</li>
+      </ul>
+
       {/* Projects */}
       <h2 className="text-xl font-bold mb-6 text-black">Selected Projects</h2>
       <div className="space-y-4">
