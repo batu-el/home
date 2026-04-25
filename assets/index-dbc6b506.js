@@ -181,7 +181,7 @@ the more urgent everything felt, the slower my connection seemed to get.
 
 what was going on?
 
-*announcement.* suddenly, the entire cafeteria went silent. for the first time all summer, everyone's eyes were fixed on the tv in the corner.
+*announcement.* at 12:13 am, the entire cafeteria went silent. for the first time all summer, everyone's eyes were fixed on the tv in the corner.
 
 a news anchor was on screen announcing:
 
