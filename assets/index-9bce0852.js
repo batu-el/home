@@ -159,7 +159,7 @@ if interaction shapes the user, then a model is a teacher whether or not we desi
 ## part 4. how to get involved
 
 if any of this is of interest to you, we wrote a [position paper](paper) which i am presenting at the ICLR AIWILD workshop. consider joining the [cognitive security task force](https://www.cstf.dev/) or the [intelligence khollective](https://knight-hennessy.stanford.edu/opportunities/intelligence-collective), and feel free to reach out if you are thinking about any of this.
-`,X8=`*nargile kafe.* the summer after my sophomore year of high school, i was living in a university dorm in istanbul. on a hot friday afternoon, three of my friends and i went to a nargile kafe just off campus, the kind that would happily serve 16-year-olds.
+`,X8=`*afternoon.* the summer after my sophomore year of high school, i was living in a university dorm in istanbul. on a hot friday afternoon, three of my friends and i went to a nargile kafe just off campus, the kind that would happily serve 16-year-olds.
 
 from the terrace there, you could see the bosphorus bridge in its full stretch, one end in asia, the other in europe. suspended between turkey's islamic roots and its european aspirations.
 
@@ -169,7 +169,7 @@ just as we were settling in, my friend sina said "we need to head back. my dad j
 
 we paid the bill and caught the next bus back to campus.
 
-*cafeteria.* on campus, everything seemed normal. we went to the cafeteria, which was open 24/7, with bad food and horse racing on a small tv. i sat down with my friends and googled:
+on campus, everything seemed normal. we went to the cafeteria, which was open 24/7, with bad food and horse racing on a small tv. i sat down with my friends and googled:
 
 turkish military news
 
@@ -181,7 +181,7 @@ the more urgent everything felt, the slower my connection seemed to get.
 
 what was going on?
 
-*tv.* at midnight, the entire cafeteria went silent. for the first time all summer, everyone's eyes were fixed on the tv in the corner.
+*night.* at midnight, the entire cafeteria went silent. for the first time all summer, everyone's eyes were fixed on the tv in the corner.
 
 a news anchor was on screen announcing:
 
@@ -189,7 +189,7 @@ a news anchor was on screen announcing:
 
 we had gotten one answer. but now, we had a hundred more questions.
 
-*context.* i'd learned about the 1980 coup from my parents: mass arrests, torture, executions. i knew the coup would mean that, overnight, the direction of the entire country would shift, and with it, all of our lives.
+i'd learned about the 1980 coup from my parents: mass arrests, torture, executions. i knew the coup would mean that, overnight, the direction of the entire country would shift, and with it, all of our lives.
 
 tension had been high in turkey for some time. over the past year, there have been a number of attacks in the country. some by the neighboring islamic state, others by the kurdish militia.
 
@@ -207,7 +207,7 @@ and just two weeks earlier, there was another one.
 
 ![Investigators in protective suits examine the scene of a suicide bombing at Istanbul's Atatürk Airport, working near a covered body on the ground.](june_ataturk.png "june 28, 2016. three suicide attackers killed 45 people and wounded dozens more at istanbul's main airport. | https://www.nytimes.com/interactive/2016/12/31/world/europe/turkey-recent-attacks.html")
 
-*cafeteria.* every table in the cafeteria had become its own little newsroom. people were trying to make sense of it all. each minute was bringing a new piece of chaos.
+every table in the cafeteria had become its own little newsroom. people were trying to make sense of it all. each minute was bringing a new piece of chaos.
 
 a friend in ankara told us the military was bombing the parliament building.
 
@@ -217,7 +217,7 @@ wait… the police are fighting the army?
 
 no one could make sense of it. every update made things more surreal.
 
-*tv.* soon after, the cafeteria fell silent for the second time. another announcement was on the tv. this time, it was the president.
+soon after, the cafeteria fell silent for the second time. another announcement was on the tv. this time, it was the president.
 
 he appeared via facetime, speaking to a tv anchor who held the phone up to the camera. he asked the citizens to go on the streets and resist the military. "halkın gücünün üstünde bir güç tanımam,"\\* he said.
 
@@ -225,7 +225,7 @@ he appeared via facetime, speaking to a tv anchor who held the phone up to the c
 
 ![A news anchor holds up a smartphone during a live CNN Türk broadcast, showing a video call with Turkey's president urging citizens to take to the streets.](president_facetime.png "https://www.cnn.com/2016/07/18/middleeast/turkey-failed-coup-explainer/")
 
-*failed coup.* after his call, crowds began to flood the streets. explosions continued throughout the night.
+*morning.* after his call, crowds began to flood the streets. explosions continued throughout the night.
 
 at 6am, we saw on tv the images of soldiers on the bosphorus bridge, with their arms raised in surrender.
 
