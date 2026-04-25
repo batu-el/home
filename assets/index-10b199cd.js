@@ -165,7 +165,7 @@ from the terrace there, you could see the bosphorus bridge in its full stretch, 
 
 ![A view of the Bosphorus Bridge in Istanbul at dusk, with city lights reflecting on the water and boats docked along the shore.](bosphorus.jpg "https://atlantahomesmag.com/article/a-taste-of-istanbul/")
 
-just as we were settling in, my friend sina said "we need to head back. my dad just texted. he saw tanks on the bosphorus bridge. he says the last time that happened was in 1980."
+just as we were settling in, my friend sina said "we need to head back. my dad just texted. he saw tanks on the bosphorus bridge. he says the last time that happened was in [1980](https://en.wikipedia.org/wiki/1980_Turkish_coup_d%27%C3%A9tat)."
 
 we paid the bill and caught the next bus back to campus.
 
