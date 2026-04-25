@@ -161,7 +161,7 @@ if interaction shapes the user, then a model is a teacher whether or not we desi
 if any of this is of interest to you, we wrote a [position paper](paper) which i am presenting at the ICLR AIWILD workshop. consider joining the [cognitive security task force](https://www.cstf.dev/) or the [intelligence khollective](https://knight-hennessy.stanford.edu/opportunities/intelligence-collective), and feel free to reach out if you are thinking about any of this.
 `,X8=`*intro.* the summer after my sophomore year of high school, i was living in a university dormitory in istanbul. on a hot friday afternoon, three of my friends and i went to a café just off campus.
 
-from the terrace there, you could see the bosphorus bridge in its full stretch, one end in asia, the other in europe. suspended between turkey's islamic roots and its aspirations toward secular european values.
+from the terrace there, you could see the bosphorus bridge in its full stretch, one end in asia, the other in europe. suspended between turkey's islamic roots and its european aspirations.
 
 ![A view of the Bosphorus Bridge in Istanbul at dusk, with city lights reflecting on the water and boats docked along the shore.](bosphorus.jpg "https://atlantahomesmag.com/article/a-taste-of-istanbul/")
 
