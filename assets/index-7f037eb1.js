@@ -321,7 +321,7 @@ $$
 so we can write $x_t = \\sqrt{\\alpha_t \\alpha_{t-1}}\\, x_{t-2} + \\sqrt{1 - \\alpha_t \\alpha_{t-1}}\\,\\varepsilon$. continuing the induction down to $x_0$ gives the famous one-shot formula
 
 $$
-\\boxed{\\;x_t = \\sqrt{\\bar\\alpha_t}\\, x_0 + \\sqrt{1-\\bar\\alpha_t}\\,\\varepsilon,\\qquad \\varepsilon \\sim \\mathcal{N}(0, I).\\;}
+x_t = \\sqrt{\\bar\\alpha_t}\\, x_0 + \\sqrt{1-\\bar\\alpha_t}\\,\\varepsilon,\\qquad \\varepsilon \\sim \\mathcal{N}(0, I).
 $$
 
 this is enormously useful: at training time we will need to noise an image to a random level $t$, and we can do it in a single matrix-vector op rather than $t$ chained ones.
@@ -444,7 +444,7 @@ this is justified because, as $\\beta_t \\to 0$, the true reverse $q(x_{t-1} \\m
 we now have a kl divergence between two gaussians, which has a closed form. after substituting and simplifying — fixing the variance and reparameterizing the mean in terms of a *noise predictor* $\\varepsilon_\\theta$ — the loss collapses to something almost embarrassingly simple:
 
 $$
-\\boxed{\\;\\mathcal{L}_{\\text{ddpm}} = \\mathbb{E}_{t,\\, x_0,\\, \\varepsilon}\\!\\left[\\Big\\|\\, \\varepsilon_\\theta\\big(\\sqrt{\\bar\\alpha_t}\\,x_0 + \\sqrt{1-\\bar\\alpha_t}\\,\\varepsilon,\\; t\\big) \\;-\\; \\varepsilon\\Big\\|^2\\right].\\;}
+\\mathcal{L}_{\\text{ddpm}} = \\mathbb{E}_{t,\\, x_0,\\, \\varepsilon}\\!\\left[\\Big\\|\\, \\varepsilon_\\theta\\big(\\sqrt{\\bar\\alpha_t}\\,x_0 + \\sqrt{1-\\bar\\alpha_t}\\,\\varepsilon,\\; t\\big) \\;-\\; \\varepsilon\\Big\\|^2\\right].
 $$
 
 where $t \\sim \\mathcal{U}\\{1, \\ldots, T\\}$, $x_0 \\sim q_0(x_0)$, $\\varepsilon \\sim \\mathcal{N}(0, I)$.
@@ -563,7 +563,7 @@ points in the same direction as $\\nabla_x p(x)$ but is rescaled by $1/p(x)$, wh
 this object — $\\nabla_x \\log p(x)$ — has a name. it is the **score function**:
 
 $$
-\\boxed{\\;s(x) := \\nabla_x \\log p(x).\\;}
+s(x) := \\nabla_x \\log p(x).
 $$
 
 geometrically, the score is a vector field over $\\mathbb{R}^d$: at every point it tells you the direction of steepest ascent of log-density. in lecture 3 we'll contrast this with a *velocity* field; for now think of the score as a compass pointing toward higher-probability regions.
@@ -730,7 +730,7 @@ $$
 for small $dt$, taylor-expand $\\sqrt{1-\\beta(t)\\,dt} \\approx 1 - \\tfrac{1}{2}\\beta(t)\\,dt$, and use $\\sqrt{dt}\\,\\varepsilon = dW$:
 
 $$
-\\boxed{\\; dx = -\\tfrac{1}{2}\\beta(t)\\, x\\, dt + \\sqrt{\\beta(t)}\\, dW.\\;}
+dx = -\\tfrac{1}{2}\\beta(t)\\, x\\, dt + \\sqrt{\\beta(t)}\\, dW.
 $$
 
 this is the **variance-preserving sde** — the continuous limit of ddpm.
@@ -768,7 +768,7 @@ $$
 then there is a **reverse-time sde** that samples the same marginals when run backward:
 
 $$
-\\boxed{\\; dx = \\big[f(x, t) - g(t)^2\\, \\nabla_x \\log p_t(x)\\big]\\, dt + g(t)\\, d\\bar W.\\;}
+dx = \\big[f(x, t) - g(t)^2\\, \\nabla_x \\log p_t(x)\\big]\\, dt + g(t)\\, d\\bar W.
 $$
 
 where $d\\bar W$ is a reverse-time wiener process.
@@ -833,7 +833,7 @@ $$
 a continuity equation describes the density evolution under *deterministic* transport along the velocity $v$. in other words, the deterministic ode
 
 $$
-\\boxed{\\; dx = \\Big[f(x, t) - \\tfrac{1}{2} g(t)^2\\, \\underbrace{\\nabla_x \\log p_t(x)}_{\\approx s_\\theta(x, t)}\\Big] dt \\;}
+dx = \\Big[f(x, t) - \\tfrac{1}{2} g(t)^2\\, \\underbrace{\\nabla_x \\log p_t(x)}_{\\approx s_\\theta(x, t)}\\Big] dt
 $$
 
 has the **same marginal densities** $p_t$ at every $t$ as the original sde. this is the **probability flow ode (pf-ode)**.
@@ -1159,7 +1159,7 @@ done — the cross terms agree, so the gradients agree.
 for the linear interpolation $x_t = t x_1 + (1-t) x_0$, the conditional velocity is just $x_1 - x_0$, so the final training objective is
 
 $$
-\\boxed{\\;\\mathcal{L}_{\\text{cfm}} = \\mathbb{E}_{t,\\, x_0,\\, x_1}\\!\\left[\\|u^\\theta_t(t x_1 + (1-t) x_0) - (x_1 - x_0)\\|^2\\right].\\;}
+\\mathcal{L}_{\\text{cfm}} = \\mathbb{E}_{t,\\, x_0,\\, x_1}\\!\\left[\\|u^\\theta_t(t x_1 + (1-t) x_0) - (x_1 - x_0)\\|^2\\right].
 $$
 
 read that aloud: sample noise $x_0$, sample data $x_1$, sample a time $t$, take the linear interpolant, and ask the network to predict $x_1 - x_0$ at the interpolant. that's *all*.
@@ -1334,7 +1334,7 @@ $$
 so the vae objective is:
 
 $$
-\\boxed{\\;\\mathcal{L}_{\\text{vae}} = \\underbrace{\\mathbb{E}_z\\big[\\|x - D_\\theta(z)\\|^2\\big]}_{\\mathcal{L}_{\\text{rec}}} \\;+\\; \\lambda_{\\text{KL}}\\, \\underbrace{\\mathrm{KL}\\!\\left(q_\\varphi(z \\mid x)\\;\\|\\;\\mathcal{N}(0, I)\\right)}_{\\mathcal{L}_{\\text{kl}}}.\\;}
+\\mathcal{L}_{\\text{vae}} = \\underbrace{\\mathbb{E}_z\\big[\\|x - D_\\theta(z)\\|^2\\big]}_{\\mathcal{L}_{\\text{rec}}} \\;+\\; \\lambda_{\\text{KL}}\\, \\underbrace{\\mathrm{KL}\\!\\left(q_\\varphi(z \\mid x)\\;\\|\\;\\mathcal{N}(0, I)\\right)}_{\\mathcal{L}_{\\text{kl}}}.
 $$
 
 a trade-off: reconstruct the input well *and* keep the latent distribution close to $\\mathcal{N}(0, I)$.
@@ -1595,7 +1595,7 @@ the same model now learns both conditional and unconditional generation. the "dr
 at inference, combine the two predictions:
 
 $$
-\\boxed{\\;\\tilde\\varepsilon_\\theta(x_t,\\, y) = \\varepsilon_\\theta(x_t,\\, \\varnothing) + w\\,\\big[\\varepsilon_\\theta(x_t,\\, y) - \\varepsilon_\\theta(x_t,\\, \\varnothing)\\big].\\;}
+\\tilde\\varepsilon_\\theta(x_t,\\, y) = \\varepsilon_\\theta(x_t,\\, \\varnothing) + w\\,\\big[\\varepsilon_\\theta(x_t,\\, y) - \\varepsilon_\\theta(x_t,\\, \\varnothing)\\big].
 $$
 
 - $w = 0$: pure unconditional generation.
