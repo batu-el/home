@@ -537,7 +537,9 @@ Second, it ties cognition to a physical landscape. The energy function and its v
 Third, the same skeleton — energy landscapes with engineered minima — shows up everywhere now: in modern attention mechanisms (which are mathematically related to a continuous version of Hopfield networks), in diffusion models, in optimization heuristics. The 1982 paper aged well.
 
 So the next time you catch half a song and the rest floods in, you can blame the magnets.
-`,Xw=`*based on* [Hopfield (1982, PNAS)](https://doi.org/10.1073/pnas.79.8.2554); [Hebb (1949), *The Organization of Behavior*](https://archive.org/details/in.ernet.dli.2015.162962).
+`,Xw=`*based on* [Hopfield (1982)](https://doi.org/10.1073/pnas.79.8.2554) and [Hebb (1949)](https://archive.org/details/in.ernet.dli.2015.162962).
+
+I've been thinking about Hopfield networks and collective intelligence of multi-agent networks. This is a quick overview of what they are and how they work.
 
 *Spin Glass Setup.* Imagine a grid of tiny arrows (*spins*) each pointing up or down. A configuration of $N$ spins is a vector with one slot per site, each slot holding an up- or down-arrow. We write up as $+1$ and down as $-1$, so a system for $N=8$ might look like:
 
@@ -551,7 +553,7 @@ $$
 H(S) \\;=\\; -\\sum_{i<j} J_{ij}\\, S_i\\, S_j,
 $$
 
-so a satisfied pair contributes $-|J_{ij}|$ and a violated pair contributes $+|J_{ij}|$. The system is then solvong the optimization over the discrete cube,
+so a satisfied pair contributes $-|J_{ij}|$ and a violated pair contributes $+|J_{ij}|$. The system is then solving the optimization over the discrete cube,
 
 $$
 S^{*} \\;=\\; \\arg\\min_{S \\,\\in\\, \\{-1,\\,+1\\}^{N}} \\; H(S),
@@ -559,11 +561,11 @@ $$
 
 and the dynamics (flipping spins to lower $H$) is local search on this landscape.
 
-*Frustration and Local Minima.* Often no configuration can satisfy everyone at once. For example, if site A wants to disagree with site B, site B wants to disagree with site C, but site A also wants to *agree* with site C, every preference can not be satisfied at the same time (see *frustration*). The energy minimizing system then has many configurations that are each a local optimum. The *energy* is high when many couplings are unhappy, low when most are satisfied. The resulting loss landscape has loss valleys where each valley is a local minimum. If we initialize the system in a state close to these valleys and procees to update the states to minimize the energy, the system rolls downhill until it lands in a loss valley. 
+*Frustration and Local Minima.* Often no configuration can satisfy everyone at once. For example, if site A wants to disagree with site B, site B wants to disagree with site C, but site A also wants to *agree* with site C, every preference can not be satisfied at the same time (see *frustration*). The energy minimizing system then has many configurations that are each a local optimum. The *energy* is high when many couplings are unhappy, low when most are satisfied. The resulting loss landscape has loss valleys where each valley is a local minimum. If we initialize the system in a state close to these valleys and proceed to update the states to minimize the energy, the system rolls downhill until it lands in a loss valley.
 
-*Hopfield Networks Motivation.* Hopfield network sets the weights between the neruons such that the state of the system when the local minimum is reached stpres a paeetern from the training data. Suppose you have patterns you want to store, each one a vector $\\xi^\\mu$ of $\\pm 1$ s. The question is, how do you set the weights $J_{ij}$ such that, when you initialize the state and update it by minimizing the energy, the state almost always rolls into the pattern from the training set that is closes to the initial state.
+*Hopfield Networks Motivation.* A Hopfield network sets the weights between the neurons such that the state of the system when the local minimum is reached stores a pattern from the training data. Suppose you have patterns you want to store, each one a vector $\\xi^\\mu$ of $\\pm 1$ s. The question is, how do you set the weights $J_{ij}$ such that, when you initialize the state and update it by minimizing the energy, the state almost always rolls into the pattern from the training set that is closest to the initial state.
 
-*Hebbian Learning.* In 1949—more than three decades before [Hopfield (1982)](https://doi.org/10.1073/pnas.79.8.2554)—[Donald Hebb](https://archive.org/details/in.ernet.dli.2015.162962) proposed that neurons that are co-activated build a stronger connection (*"neurons that fire together wire together"*). We can use this idea to come up with a formula for setting $J_{ij}$. For each pattern $\\xi^\\mu$ you want stored, look at every pair of sites $i$ and $j$:
+*Hebbian Learning.* In 1949 (more than three decades before [Hopfield (1982)](https://doi.org/10.1073/pnas.79.8.2554)) [Donald Hebb](https://archive.org/details/in.ernet.dli.2015.162962) proposed that neurons that are co-activated build a stronger connection (*"neurons that fire together wire together"*). We can use this idea to come up with a formula for setting $J_{ij}$. For each pattern $\\xi^\\mu$ you want stored, look at every pair of sites $i$ and $j$:
 
 - If $\\xi^\\mu_i$ and $\\xi^\\mu_j$ have the same sign in that pattern, add a vote that says "these two should agree."
 - If they have opposite signs, add a vote that says "these two should disagree."
