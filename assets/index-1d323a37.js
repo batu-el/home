@@ -537,7 +537,7 @@ Second, it ties cognition to a physical landscape. The energy function and its v
 Third, the same skeleton — energy landscapes with engineered minima — shows up everywhere now: in modern attention mechanisms (which are mathematically related to a continuous version of Hopfield networks), in diffusion models, in optimization heuristics. The 1982 paper aged well.
 
 So the next time you catch half a song and the rest floods in, you can blame the magnets.
-`,sx=`*based on* [Hopfield (1982)](https://doi.org/10.1073/pnas.79.8.2554) and [Hebb (1949)](https://archive.org/details/in.ernet.dli.2015.162962).
+`,sx=`*based on* [Hopfield (1982)](https://doi.org/10.1073/pnas.79.8.2554) and [Hebb (1949)](https://archive.org/details/organizationofbe00hebbrich).
 
 I've been thinking about Hopfield networks and collective intelligence of multi-agent systems. This is a quick overview of what they are and how they work.
 
