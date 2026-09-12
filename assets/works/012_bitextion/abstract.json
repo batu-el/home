@@ -1,0 +1,15 @@
+{
+  "title": "BiTextion: Sociotechnical Alignment in Automated Optimization Modeling via Textual Bisection for Task Disambiguation",
+  "other": 13,
+  "year": 2024,
+  "month": 6,
+  "order": 5,
+  "authors": "Batu El, Madeleine Udell",
+  "area": "alignment and social impacts",
+  "tags": ["Udell Lab Rotation"],
+  "abstract": "Automated optimization modeling systems push the burden of precise problem specification onto the user \u2014 hard for non-experts. BiTextion is a general framework that (i) samples candidate detailed problem descriptions conditioned on a vague one and (ii) narrows the space by asking questions that efficiently resolve ambiguities. Simulated user studies show BiTextion improves Llama3.1-8b at eliciting objectives and constraints; gains do not always carry over to larger models, motivating model-specific test-time strategies.",
+  "links": {
+    "paper": "bitextion.pdf",
+    "code": "https://github.com/batu-el/bitextion"
+  }
+}

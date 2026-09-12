@@ -1,0 +1,16 @@
+{
+  "title": "notes on stochastic interpolants for generation",
+  "date": "spring 2026",
+  "year": 2026,
+  "month": 4,
+  "order": 3,
+  "excerpt": "side-by-side notes on the forward process, training objective, sampling, and deterministic counterparts of discrete-time diffusion, score-based diffusion, and flow matching.",
+  "content": "content.md",
+  "parts": [
+    { "id": "diffusion", "title": "1 diffusion", "content": "lecture1.md", "notes": "lecture1-notes.pdf" },
+    { "id": "score", "title": "2 score", "content": "lecture2.md", "notes": "lecture2-notes.pdf" },
+    { "id": "flow", "title": "3 flow", "content": "lecture3.md", "notes": "lecture3-notes.pdf" },
+    { "id": "representation", "title": "4 representation", "notes": "lecture4-notes.pdf" }
+  ],
+  "links": {}
+}

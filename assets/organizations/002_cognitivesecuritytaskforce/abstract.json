@@ -1,0 +1,13 @@
+{
+  "title": "Cognitive Security Task Force",
+  "venue": "Stanford Institute for Human-Centered AI",
+  "year": 2025,
+  "month": 1,
+  "order": 2,
+  "role": "Co-Director",
+  "description": "Research collective at Stanford HAI working on cognitive security \u2014 the integrity of human attention, perception, memory, and judgment in the age of AI. Brings together perspectives from industry, policy, academia, and defense to develop standards and safeguards for human decision-making, sensemaking, and learning.",
+  "tags": ["Active"],
+  "links": {
+    "site": "https://www.cstf.dev/"
+  }
+}

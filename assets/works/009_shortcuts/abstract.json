@@ -1,0 +1,16 @@
+{
+  "title": "Understanding and Improving Representation Learning in the Presence of Shortcuts",
+  "other": 1,
+  "year": 2024,
+  "month": 6,
+  "order": 1,
+  "authors": "Batu El, Michalis Korakakis, Andreas Vlachos",
+  "area": "applied interpretability",
+  "tags": ["MPhil Thesis"],
+  "abstract": "Investigates how shortcut features distort the representations learned by neural networks and proposes targeted interventions during training that recover features more aligned with the underlying task.",
+  "links": {
+    "paper": "https://github.com/batu-el/understanding-shortcuts/blob/main/paper.pdf",
+    "code": "https://github.com/batu-el/understanding-shortcuts",
+    "slides": "https://github.com/batu-el/understanding-shortcuts/blob/main/presentation.pdf"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Physics of Agents: Statistical Mechanics Predicts Collective Behavior of AI Agents",
+  "year": 2026,
+  "month": 8,
+  "featured": 1,
+  "authors": "Batu El, Jinhee Paeng, Fatih Dinc, Shiye Su, Mete Erdogan, Aneesh Pappu, Haotian Ye, Wanjia Zhao, Surya Ganguli, James Zou",
+  "area": "multiagent systems and inference time techniques",
+  "tags": [
+    "Preprint"
+  ],
+  "links": {
+    "paper": "https://arxiv.org/abs/2608.16578",
+    "code": "https://github.com/batu-el/physics-of-agents",
+    "appendix": "https://batu-el.github.io/physics-of-agents",
+    "dataset": "https://huggingface.co/physics-of-agents",
+    "thread_james": "https://x.com/james_y_zou/status/2090094352307736801",
+    "thread_surya": "https://x.com/suryaganguli/status/2090115634231480755"
+  }
+}

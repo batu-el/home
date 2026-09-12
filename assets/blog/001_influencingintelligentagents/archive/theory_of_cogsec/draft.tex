@@ -1,0 +1,354 @@
+
+
+
+
+
+\begin{CustomBox}{Experiment 1}
+We aim to determine whether training on videos of environment trajectories leads to the emergence of implicit knowledge about transition dynamics. In particular, we ask whether the model internalizes the “rules of the game” purely from observational data.
+\end{CustomBox}
+
+
+\section{Background}
+\textit{Transformers.}
+
+\textit{Efficient Attention.} 
+
+\textit{State-Space Models.}
+
+
+\textit{Test-Time Training.} \citet{sun2025learninglearntesttime} has introduced the idea of test time training, where each 
+
+\citet{dalal2025oneminutevideogenerationtesttime} have applied this method to videos. 
+
+
+\textit{Video Pretraining}
+VideoWorld: Exploring Knowledge Learning from Unlabeled Videos \citep{ren2025videoworldexploringknowledgelearning}
+
+VideoWorld 2: Learning Transferable Knowledge from Real-world Videos \citep{ren2026videoworld2learningtransferable}
+
+(1) self-supervised pretraining
+(2) fine-tuning
+(3) reinforcement learning
+
+\textit{WaveMamba}
+Wavelet State Space Model
+
+\textit{Dream to Control: Learning Behaviors by Latent Imagination} \citep{hafner2020dreamcontrollearningbehaviors}
+
+\textit{Training Agents Inside of Scalable World Models} \citep{hafner2025trainingagentsinsidescalable}
+
+\section{Problem Definition}
+
+definition: General Knowledge
+knowledge of the world, suhc that, when you havea defined goal you want to achieve, you can leverage hat knowledge to achieve your goal in a better way. 
+
+definition: Rules of the Game
+this is the laws of pyhsics in the case of the real world. 
+
+defintion:
+
+
+definition: Synthetic Video
+there are two limitations for doing video pretraining. (1) the video models are expensive to train when the 
+
+
+\section{Research Questions}
+
+RQ1. does the vidoe model training learn the pysics fo the environemnt?
+
+RQ2. can we leverage the knowledge from the video pretraining to achieve certain goals in this environment?
+
+
+
+1. can we use the knowledge learned in the videos for achieving certain goals pbetter. 
+
+
+2. can we train a model that knows about a lot of different environments, such that when it sees a new environment, it is able to generalize to that environment. we would ike to test this. 
+
+
+3 We would ike to generate wideos with our pretrained video model. we want these videos to look realistic.
+
+
+The girds are 96*96
+
+
+we need to clarify how we can encode different positions in the grid and different 
+
+
+test time training is lifelong learning. how can this be done with RL?
+
+\textit{Take on test time training:} we need something that is oing to check what type of environment it is in and get different types of rewards in the journey. the main problem is that the models can not obsrve their own rewards. if they can observe their own rewards, then the test time training problem is resolved.  I believe this is an interesting observation. 
+
+
+
+
+
+\subsection{Model}
+
+We adopt a convolutional sequence model for next-frame prediction, taking $C$ consecutive frames as input and predicting the next frame $\hat{x}_{t+1}$ with an MSE loss. For reinforcement learning, we initialize the agent's observation encoder from the pretrained model and attach a policy network $\pi_\theta(a \mid s)$ and value network $V_\phi(s)$. We compare training from scratch, fine-tuning with a frozen encoder, and full fine-tuning to isolate the contribution of video pretraining.
+
+
+
+\newpage
+\subsection{Pretraining Dataset}
+
+We generated a pretraining dataset of psynthetic game of llife videos. to amke this evinrronemnt more complex, we run num-fileds parallel game of live frames and color code each of the fiels in our display. 
+
+training on real world videos is expensive, there are different methods how triaining is done. mapping it to a latent space. 
+
+\subsection{Game Environment for Reinforcement Learning}
+
+the goal of the game is for the player to move from one end of the frame to the other end, we call this the fraeme crossing game. 
+
+when the player touches the colored cells, it looses the game. the goal is to get to the other side in minimum time. 
+
+To be able to play this game well. the model needs to understadn the dynamics of the environment to avoid running into 
+
+
+
+
+\section{Models}
+we train a state space model.
+
+mamba style state space mdoels. lately state space models have been applied to signals as well. 
+
+we will also explore the different representations. 
+
+
+\section{Experiments}
+
+you will see 1000 environments and you will generalize to 1001st environment
+
+
+we can give 10 frames for the model to basically learn the dynamics of the environment
+
+then, baes on the synamics of the environment, the model can understand how it needs to behave 
+
+
+we need to think carefully about what is going to be the training objective for this model
+
+
+4
+
+
+\newpage
+
+\section{Introduction}
+\begin{quote}
+\textit{``What important truth do very few people agree with you on?''}
+\begin{flushright}
+\citet{thiel2014zero}
+\end{flushright}
+\end{quote}
+
+Language models are blocking our path to achieve general intelligence. Let me explain what I mean by that. 
+
+\textbf{What I learned as a kid.} I leanred knowledge as a kid and I remember how. I first learned to see things. then my dad held up a glass of water and thought me this is water. he said water. he associated the sound with the visual input I had. 
+
+In this case, language is this abstract concept that is audio first. it is basically a common space where inputs from different modalities are represented. But the primary modalities are audio and visual imputs. 
+
+(And time is also there as a significant component in this equation because the learning happens thorugh time.)
+
+the text modality comes tertiary. 
+
+We all see things and hear things. and we learna common representation for these things though a unifying framework which we call language. 
+
+It is not until primary school that we start learning about symbols. We are thought these symbols such that when you see this letter or comination of letters it makes this sound. hence the symbols are now associated to sounds which were previously associated with visuals. 
+
+
+\textbf{Text was the path of least resistance} Humanity has been written on thigs in the past 1000 years and when internet is invented, those writings have been put up. 
+
+but this data is limited, and we actually ran into a wall. The only way to overcome the data wall is to switch to the natural modalities of the universe. 
+
+
+\textbf{The data is bottlenecked.} Right now, we ran into a data wall. there is a huge economy in generating more data. however, the data wall is a self imposed contrained on us put in place by the modality that we chose to primarily trian our mdoels on: text. 
+
+Text is not a primary modality. someone need to process the real world and encode it in text form so that we can use it to train our models. that is what contructs the data wall. 
+
+Hwoever, when you thinkkg about the real world, the data is abundant. 
+
+
+
+
+
+\subsection{Motivating Questions}
+\textit{Is next frame prediction enough?} It seems from our experience with language that if we train our models on next frame prediction, we end up at a poin where the models are doing interesting things and they can learn general knowledge with this training objective. But this is certainly not the only way that intelligent systems can lear. Reinformcenment learning from teh rewrds is a different way where there is explicit feedback. 
+
+\textit{Is random initialization enough?} Living things seem to have a prior, but can this be done without a prior?
+
+One approach that can seem promising to an untrained eye is to put the human priors that we think makes sense. A more principled way may seem to be to actually read what the prior is from the human brains and initialize our network with those priors. But when you think about it, humans were literally bacteria and those rpiors evolved across generations. So if you are thinking about a very large scale, in the big picture, the move is to have a mechanism through which some priors can evovle across generations. 
+
+Is this resetting property a good thing or a contraint for the natural life i am not sure, but it seems obvious that it helped our priors evolve. Maybe from a random initialization, if someone were to live all those lives, they would still end up in a good place. 
+
+\textit{How important is the interaction between different modalities?} while this is the key to language, it may not be as fundamental when we tthink about learnign geenral things from primary modalities. 
+
+\subsection{Research Questions}
+
+\textbf{How to measure general intelligence without using text?}
+Lift your finger if you can understand ?
+
+How well can we predict the next frame?
+
+
+Can we predict the next frame better if we have access to the audio from that frame? if yes, this would show that we can leverage the input from one modality to make predictions on the other modality. 
+
+can we do some sort of training on synthetic videos?
+
+Start with game of life!
+
+Add sounds to the Game of life. 
+
+now we have a synthetic dataset of video and audio!
+
+now what can we do with this? weneed some sort of evaluaiton to understand what is happening in the world. 
+
+\section{Background}
+\section{Setup}
+\subsection{Synthetic World}
+In the real world, there are many physics rules that govern the update of the universe from timestep 1 to timestep 2. 
+
+when we record an audio or a video, this is a projection of the reality in the observable domains. real world physics rules are very complex and it would not be surprising to see some sort of result for 
+
+``complexity of the rules''
+and
+``resolution of the observations''
+
+that allow us learn from our observations. 
+
+Most importantly, there are a couple of things happening here. 
+
+1. real world physical rules
+2. projection of the physical rules to the observable space
+3. learning from the observations
+
+
+there are two types of learning: 
+(1) the next frame prediction objective. 
+(2) the reward based objective where the goal is to go across the board
+
+
+There is an additional setup: we shift the input so that the audio signal comes before the visual signal (that is, in this environment we have access to the informaiton)
+
+
+there should also be some stochasiticity with the rules. 
+
+
+\newpage
+
+
+
+We set up a synthetic world with the simplest physics rules possible. 
+
+
+We have two possible setups.
+
+(1) we only do video pretraining
+
+
+(2) we have a goal, which is to cross to the next side. 
+
+
+in this world, the sound moves faster than light. 
+
+
+\subsection{Evaluation Metrics}
+
+the first metric is perplexity (the next frame prediciton accuracy)
+
+
+the second metric is reward (which is how well are we able to achieve the task.
+
+
+
+Fro the reward one, we need to code  this up as an environment, that is, gpu makes a prediction, cpu updates the environment.
+
+
+We also want to have a setup where the game is run in multiple dimensions and our observations are in 2D. so this can try to answer the question, can the models learn from 2d video about the physics of the 3d world.
+
+\subsection{Models}
+
+We use a diffusion model to predict the next frame. 
+
+
+
+
+
+\subsection{Problem Definition} 
+
+
+\section{Method}
+
+\section{Experiments}
+
+experiment 1. validation of the environments. 1D, 2D, 3D, and 4D environments.
+
+experiment 2. 
+
+
+\subsection{Timeline}
+\textit{Feb 7 -- Feb 10: Project Setup \& Baseline.}
+
+\textit{Feb 10 -- Feb 17: Profiling.}
+
+\textit{Feb 18 -- Feb 25: Accelerator Design \& Implementation.}
+
+\textit{Feb 26 -- Mar 5: Optimization \& Stability.}
+
+\textit{Mar 6 -- Mar 12: Final Evaluation.}
+
+\textit{Mar 13 -- Mar 19: Report Writing.}
+
+
+\subsection{Resources}
+
+\section{Ilya Works}
+Neural GPUs learn algorithms,
+Lukasz Kaiser and Ilya Sutskever, ICLR 2016
+[code]
+
+Reinforcement Learning Neural Turing Machines,
+Wojciceh Zaremba and Ilya Sutskever, arXiv 2015
+[code]
+
+Training Recurrent Neural Networks with Hessian-Free Optimization,
+James Martens and Ilya Sutskever, ICML 2011.
+[code]
+
+Generating Text with Recurrent Neural Networks,
+Ilya Sutskever, James Martens, and Geoffrey Hinton, ICML 2011.
+[code]
+
+Using matrices to model symbolic relationship,
+Ilya Sutskever and Geoffrey Hinton, NIPS*21, 2008.
+[code, matlab code by Laurens van der Maaten]
+
+The Recurrent Temporal Restricted Boltzmann Machine,
+Ilya Sutskever, Geoffrey Hinton and Graham Taylor, NIPS*21, 2008.
+[code]
+
+Temporal Kernel Recurrent Neural Networks,
+Ilya Sutskever and Geoffrey Hinton, Neural Networks, Vol. 23, Issue 2, March 2010, Pages 239-243.
+[code; but note that the idea was invented much earlier, 1, 2]
+
+Learning Multilevel Distributed Representations for High-Dimensional Sequences,
+Ilya Sutskever and Geoffrey Hinton, AISTATS 2007.
+[code]
+
+
+
+
+\newpage
+
+
+
+Pre-training for robot learning has become an active area of research \citep{kumar2023pretrainingrobotsofflinerl}. One prominent line of work learns visual representations through self-supervised objectives such as masked image modeling \citep{xiao2022maskedvisualpretrainingmotor, radosavovic2022realworldrobotlearningmasked, seo2023maskedworldmodelsvisual, karamcheti2023languagedrivenrepresentationlearningrobotics, liu2023maskedautoencodingscalablegeneralizable} and contrastive learning \citep{nair2022r3muniversalvisualrepresentation, srinivas2020curlcontrastiveunsupervisedrepresentations, jing2023exploringvisualpretrainingrobot}, with several studies showing that pretrained vision models transfer surprisingly well to control \citep{parisi2022unsurprisingeffectivenesspretrainedvision, yenchen2021learninglearningactvisual, ma2023vipuniversalvisualreward}. A complementary approach first learns a predictive world model and then trains an RL agent within its predictions \citep{hafner2020dreamcontrollearningbehaviors, hafner2025trainingagentsinsidescalable, seo2023maskedworldmodelsvisual}. A third line of work leverages video data more directly: VPT \citep{baker2022videopretrainingvptlearning} pseudo-labels unlabeled Minecraft footage via an inverse dynamics model, while VIPER \citep{escontrela2023videopredictionmodelsrewards} repurposes video prediction models as reward signals---both using in-domain video. In contrast, several efforts pretrain on large-scale, out-of-domain video or image data and transfer the learned representations to robotic manipulation \citep{wu2023unleashinglargescalevideogenerative, brohan2023rt2visionlanguageactionmodelstransfer, du2023learninguniversalpoliciestextguided, radosavovic2023robotlearningsensorimotorpretraining}. Other work explores model-based control from learned video predictors \citep{du2023learninguniversalpoliciestextguided, mendonca2023structuredworldmodelshuman}, multi-task and self-supervised pretraining objectives \citep{sun2023smartselfsupervisedmultitaskpretraining, schwarzer2021pretrainingrepresentationsdataefficientreinforcement, thomas2023plexmakingavailabledata, bhateja2023roboticofflinerlinternet}, architectural innovations that fuse pretrained and policy networks \citep{lin2023spawnnetlearninggeneralizablevisuomotor}, and navigation methods combining large pretrained language and vision models \citep{shah2022lmnavroboticnavigationlarge}. Most recently, large-scale video generation models have raised the prospect that generative pretraining can internalize physical dynamics \citep{liu2024sorareviewbackgroundtechnology, ren2025videoworldexploringknowledgelearning, ren2026videoworld2learningtransferable}. Our work shares this motivation but pursues it in a controlled synthetic setting: rather than training on internet-scale video, we use Conway's Game of Life to generate sequences with known, exact dynamics, allowing us to precisely characterize when and how next-frame prediction transfers to embodied navigation.
+
+\subsection{Positive Results on Pre-training}
+[move the positive results here]
+
+\subsection{Negative Results on Pre-training}
+\citep{hansen2023pretrainingvisuomotorcontrolrevisiting}
+
+\citep{schneider2025surprisingineffectivenesspretrainedvisual}
+
+\citep{dasari2023unbiasedlookdatasetsvisuomotor}

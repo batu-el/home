@@ -1,0 +1,17 @@
+{
+  "title": "Moloch's Bargain: Emergent Misalignment When LLMs Compete for Audiences",
+  "year": 2025,
+  "month": 10,
+  "order": 1,
+  "featured": 2,
+  "authors": "Batu El, James Zou",
+  "area": "alignment and social impacts",
+  "tags": ["ICML 2026 AI4Good Workshop"],
+  "abstract": "When language models compete for audiences \u2014 for clicks, votes, or sales \u2014 small optimization gains can drive large drifts in honesty, safety, and alignment. We study these competitive dynamics empirically across simulated markets and find that misalignment emerges as a side effect of audience-seeking behavior, even when each individual model is well-intentioned.",
+  "links": {
+    "paper": "https://arxiv.org/abs/2510.06105",
+    "code": "https://github.com/batu-el/molochs-bargain",
+    "thread_james": "https://x.com/james_y_zou/status/1975939603363463659",
+    "poster": "icme-poster.pdf"
+  }
+}

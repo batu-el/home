@@ -1,0 +1,27 @@
+{
+  "title": "the turkish student association democracy saga",
+  "date": "May 2026",
+  "year": 2026,
+  "month": 5,
+  "order": 0,
+  "excerpt": "a small student election, a bulk voter registration, a disputed ruling, and a presidency that ended in a week. the saga, told through the emails themselves.",
+  "content": "content.md",
+  "parts": [
+    { "id": "01-logistics", "title": "1 · election logistics", "content": "email01.md" },
+    { "id": "02-consistency", "title": "2 · a question of consistency", "content": "email02.md" },
+    { "id": "03-recusal", "title": "3 · on conflicts of interest", "content": "email03.md" },
+    { "id": "04-neutrality", "title": "4 · who gets to decide", "content": "email04.md" },
+    { "id": "05-message", "title": "5 · a message to candidates and voters", "content": "email05.md" },
+    { "id": "06-decision", "title": "6 · the decision", "content": "email06.md" },
+    { "id": "07-removal", "title": "7 · a vote on the presidency", "content": "email07.md" },
+    { "id": "08-farewell", "title": "8 · board görevimin sona ermesi", "content": "email08.md" },
+    { "id": "09-response", "title": "9 · a response, and a postscript", "content": "email09.md" },
+    { "id": "10-ethics", "title": "10 · rules are not the same as ethics", "content": "email10.md" },
+    { "id": "11-record", "title": "11 · what this was actually about", "content": "email11.md" },
+    { "id": "12-judge", "title": "12 · plaintiff and judge", "content": "email12.md" },
+    { "id": "13-stepback", "title": "13 · stepping back", "content": "email13.md" },
+    { "id": "14-toparlanin", "title": "14 · biraz toparlanın", "content": "email14.md" },
+    { "id": "15-clarify", "title": "15 · clarifying the confusion", "content": "email15.md" }
+  ],
+  "links": {}
+}

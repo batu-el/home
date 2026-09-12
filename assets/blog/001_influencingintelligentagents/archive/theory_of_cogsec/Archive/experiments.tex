@@ -1,0 +1,42 @@
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lcccccccc}
+\toprule
+& \multicolumn{2}{c}{F1} & \multicolumn{2}{c}{F2} & \multicolumn{2}{c}{F3} & \multicolumn{2}{c}{F4} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+Level & R1 & R2 & R1 & R2 & R1 & R2 & R1 & R2 \\
+\midrule
+L1 & 90.3\% & 89.7\% & 56.1\% & 56.1\% & 21.9\% & 16.9\% & 12.0\% & 13.3\% \\
+L2 & 90.0\% & 95.1\% & 52.6\% & 49.8\% & 28.0\% & 24.0\% & 14.1\% & 14.1\% \\
+L3 & 91.1\% & 97.3\% & 59.2\% & 59.1\% & 32.7\% & 28.7\% & 16.2\% & 17.1\% \\
+L4 & 85.9\% & 92.4\% & 52.8\% & 68.5\% & 36.9\% & 35.4\% & 12.5\% & 15.6\% \\
+\bottomrule
+\end{tabular}
+\caption{Progress by level, feature group, and round.}
+\end{table}
+
+Table~\ref{tab:progress} provides a detailed breakdown of progress by model size (L1--L4), field count (F1--F4), and reward function (R1, R2). The numbers corroborate the visual trends: performance degrades gracefully from F1 to F2 (roughly a 30--40 percentage point drop), more steeply from F2 to F3 (another 20--30 points), and modestly from F3 to F4 (an additional 10--15 points). Within each field count, the two reward functions yield comparable results, with R2 occasionally outperforming R1 by a small margin (e.g., L4--F2: 68.5\% vs.\ 52.8\%) and occasionally underperforming (e.g., L1--F3: 16.9\% vs.\ 21.9\%). No systematic dominance of one reward over the other is observed, and a paired comparison across all 16 conditions shows no statistically significant difference between R1 and R2. We therefore pool results across reward functions in subsequent analyses where appropriate.
+
+
+
+
+Figure~\ref{fig:pretrainedvsrl} presents the central comparison of this paper: RL training curves for pretrained (blue) and scratch (red) agents across all 16 combinations of field count (columns) and model depth (rows). The shaded blue region highlights episodes where the pretrained agent leads. Three distinct regimes emerge.
+
+\paragraph{Easy environments (Field = 1).}
+Both pretrained and scratch agents ultimately reach high asymptotic progress (${\sim}$90--95\%), but the pretrained agent converges substantially faster. In the Layer~1 configuration, the pretrained agent reaches 80\% progress within approximately 1{,}000 episodes, while the scratch agent requires roughly 4{,}000--5{,}000 episodes to reach the same level. This gap narrows with increasing model capacity---by Layer~4, the scratch agent catches up somewhat earlier---but the pretrained agent consistently leads during the first half of training. The interpretation is straightforward: when the environment is simple enough that both approaches eventually solve the task, pretraining functions as an accelerant, providing a warm start that reduces the exploration burden during early training.
+
+\paragraph{Intermediate environments (Field = 2).}
+This is the regime where pretraining confers its most striking advantage. Pretrained agents not only converge faster but reach a strictly higher asymptotic progress level than scratch agents. For example, at Layer~1, the pretrained agent plateaus near 65--70\% progress while the scratch agent stalls around 40--50\%. This gap is visible across all model depths, though it narrows slightly for larger models. The shaded region between the two curves remains substantial throughout training, indicating a persistent rather than transient advantage. We hypothesize that in this intermediate regime, the pretrained model's knowledge of cell dynamics provides a qualitative edge: the agent can anticipate upcoming obstacle configurations and plan several steps ahead, whereas the scratch agent must learn both the dynamics and the policy simultaneously, converging to a less effective local optimum.
+
+\paragraph{Hard environments (Field = 3--4).}
+As the number of parallel fields increases to 3 and especially 4, the advantage of pretraining diminishes progressively. At Field~3, pretrained agents still show a modest edge---particularly for larger models (Layer~3--4), where progress reaches approximately 30--35\% compared to 25--30\% for scratch agents. At Field~4, however, both pretrained and scratch agents struggle to exceed 15--20\% progress, and the training curves largely overlap. The shaded gap between the two conditions shrinks to near zero. In this regime, the environment is so densely populated with obstacles that even perfect knowledge of the dynamics may be insufficient for long-horizon planning: the agent faces a combinatorial explosion of possible obstacle configurations, and viable paths through the grid become exceedingly rare. The bottleneck shifts from dynamics prediction to combinatorial planning under extreme density, a challenge that pretraining alone cannot resolve.
+
+\paragraph{Effect of model capacity.}
+Across all difficulty levels, increasing model depth from 1 to 4 layers provides consistent but modest improvements. The benefit of capacity is most pronounced in the intermediate regime (Field~2--3), where larger models better exploit the pretrained representations. At Field~1, even a single-layer model suffices, and at Field~4, additional layers cannot overcome the fundamental difficulty of the environment. Notably, the relative advantage of pretraining over scratch training is largely preserved across model sizes, suggesting that the benefit of pretraining is complementary to, rather than substitutable by, increased capacity.
+
+
+
+These findings resonate with emerging results in the broader literature on video pretraining for robotics, where the benefit of pretrained representations has been observed to depend on the alignment between pretraining data and downstream task complexity~\citep{wu2023unleashinglargescalevideogenerative, parisi2022unsurprisingeffectivenesspretrainedvision}. Our controlled setting allows us to isolate this relationship more precisely than is typically possible with real-world experiments, where distribution shift, partial observability, and task diversity confound the analysis.
+
+Several implications follow for the design of pretrained agents. First, the value of pretraining is not uniform across tasks: practitioners should expect the largest gains in environments of intermediate complexity, where the dynamics are rich enough to matter but not so overwhelming as to render prediction insufficient. Second, pretraining and model capacity appear to provide complementary rather than redundant benefits, suggesting that scaling both simultaneously is preferable to scaling either alone. Third, the failure mode in hard environments---where prediction accuracy is high but navigation performance remains low---points to the need for architectures that can translate accurate world models into effective long-horizon plans, potentially through integration with explicit search or hierarchical planning mechanisms~\citep{hafner2020dreamcontrollearningbehaviors, hafner2025trainingagentsinsidescalable}.

@@ -1,0 +1,16 @@
+{
+  "title": "Parameterizing Chains in Generalized Fixed-Point-Free Involutions",
+  "other": 12,
+  "year": 2022,
+  "month": 5,
+  "order": 1,
+  "authors": "Batu El, Michael Joyce, Mahir Can",
+  "area": "other",
+  "tags": ["Undergraduate Thesis", "Mathematics"],
+  "abstract": "A combinatorial study of chains in generalized fixed-point-free involutions, giving an explicit parameterization that simplifies enumeration and exposes structure useful for downstream work in algebraic combinatorics.",
+  "links": {
+    "paper": "https://library.search.tulane.edu/discovery/delivery/01TUL_INST:Tulane/12433822100006326",
+    "code": "https://github.com/batu-el/parameterizing-chains-in-generalized-involutions",
+    "slides": "https://github.com/batu-el/parameterizing-chains-in-generalized-involutions/blob/main/HT2-Presentation.pdf"
+  }
+}

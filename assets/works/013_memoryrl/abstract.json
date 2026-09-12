@@ -1,0 +1,16 @@
+{
+  "title": "Reinforcement Learning Training for Dynamic Context Management in Mathematical Reasoning",
+  "other": 6,
+  "year": 2025,
+  "month": 6,
+  "order": 2,
+  "authors": "Batu El",
+  "area": "reinforcement learning",
+  "tags": ["Stanford CS224R Project", "Deep Reinforcement Learning"],
+  "abstract": "Mathematical reasoning agents quickly fill their context with intermediate work, forcing brittle, hand-tuned truncation. We use reinforcement learning to train a model that dynamically manages its own context \u2014 deciding what to keep, summarize, or discard during multi-step solutions \u2014 and show this improves accuracy and efficiency on math benchmarks compared to fixed-window baselines.",
+  "links": {
+    "paper": "MemoryTraining.pdf",
+    "code": "https://github.com/batu-el/TrainedMemory2",
+    "poster": "cs224r-poster.pdf"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Position: AI Development Should Prioritize Cognitive Security",
+  "other": 2,
+  "year": 2026,
+  "month": 1,
+  "order": 2,
+  "authors": "Batu El*, Shiye Su*, Aneesh Pappu*, Peggy Yin*, Julie Heng*, Eric Heng, Ryan Wang, Andreas Haupt, James Zou",
+  "area": "alignment and social impacts",
+  "tags": ["ICLR 2026 AIWILD Workshop"],
+  "abstract": "We argue that AI safety should expand beyond alignment and oversight to include the protection of human cognition \u2014 the perceptions, beliefs, and decisions that AI systems increasingly mediate. We define cognitive security, sketch its threat model, and outline concrete research and policy directions.",
+  "links": {
+    "paper": "paper_cstf_position.pdf",
+    "poster": "cstf-poster.pdf",
+    "site": "https://www.cstf.dev/"
+  }
+}

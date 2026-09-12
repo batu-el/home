@@ -1,0 +1,16 @@
+{
+  "title": "Inefficiencies of Meta Agents for Agent Design",
+  "other": 3,
+  "year": 2025,
+  "month": 10,
+  "order": 1,
+  "authors": "Batu El, Mert Yuksekgonul, James Zou",
+  "area": "multiagent systems and inference time techniques",
+  "tags": ["EMNLP 2025 Findings", "ICML 2025 PRAL Workshop", "Stanford Self-Improving AI Agents Course"],
+  "abstract": "Recent works automate the design of agentic systems with meta-agents that propose and refine new architectures. We examine three challenges: (1) simply expanding context with all prior agents performs worse than ignoring them \u2014 an evolutionary approach helps; (2) the meta-agent commits to one agent at test time, but its designs have low behavioral diversity; (3) automated design is economically viable on only a few datasets when amortized over 15,000+ examples.",
+  "links": {
+    "paper": "https://arxiv.org/abs/2510.06711",
+    "code": "https://github.com/batu-el/meta-agent-inefficiency",
+    "poster": "emnlp-poster.pdf"
+  }
+}

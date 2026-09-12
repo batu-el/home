@@ -1,0 +1,16 @@
+{
+  "title": "Cost-of-Pass: An Economic Framework for Evaluating Language Models",
+  "other": 4,
+  "year": 2026,
+  "month": 1,
+  "order": 3,
+  "authors": "Mehmet Hamza Erol, Batu El, Mirac Suzgun, Mert Yuksekgonul, James Zou",
+  "area": "alignment and social impacts",
+  "tags": ["ICLR 2026"],
+  "abstract": "We propose Cost-of-Pass, an economic framework that evaluates language models by the expected dollar cost of producing a correct answer. The metric unifies accuracy and inference cost, exposes regressions hidden by accuracy-only benchmarks, and yields a clean decision rule for model selection in production.",
+  "links": {
+    "paper": "https://arxiv.org/abs/2504.13359",
+    "code": "https://github.com/mhamzaerol/Cost-of-Pass",
+    "poster": "cost-of-pass-poster.pdf"
+  }
+}

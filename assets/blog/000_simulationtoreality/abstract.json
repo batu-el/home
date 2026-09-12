@@ -1,0 +1,11 @@
+{
+  "published": false,
+  "title": "simulation to reality",
+  "date": "May 2026",
+  "year": 2026,
+  "month": 5,
+  "order": 0,
+  "excerpt": "foundational sim2real papers in robotics, and a question: can the same program work for social tasks with language models?",
+  "content": "content.md",
+  "links": {}
+}

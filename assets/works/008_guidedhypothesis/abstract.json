@@ -1,0 +1,15 @@
+{
+  "title": "Bayesian Optimization for Guided Hypothesis Sampling in Minimum Bayes Risk Decoding",
+  "other": 9,
+  "year": 2024,
+  "month": 9,
+  "order": 3,
+  "authors": "Batu El, Julius Cheng, Andreas Vlachos",
+  "area": "multiagent systems and inference time techniques",
+  "tags": ["Preprint"],
+  "abstract": "Minimum Bayes Risk decoding is bottlenecked by the cost of sampling many hypotheses. We use Bayesian optimization to guide which hypotheses to sample next, recovering most of MBR's quality at a fraction of the compute.",
+  "links": {
+    "paper": "https://github.com/batu-el/guided-hypothesis-sampling/blob/main/paper-guided-hypothesis-sampling.pdf",
+    "code": "https://github.com/batu-el/guided-hypothesis-sampling"
+  }
+}

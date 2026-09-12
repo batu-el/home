@@ -1,0 +1,14 @@
+{
+  "title": "TERMS-Bench: Diagnosing LLM Negotiation Agents Beyond Deal Rate",
+  "other": 10,
+  "year": 2026,
+  "month": 5,
+  "order": 4,
+  "authors": "Erica Zhang, Fangzhao Zhang, Aneesh Pappu, Batu El, Jose Blanchet, Susan Athey, Jiashuo Liu, James Zou",
+  "area": "alignment and social impacts",
+  "abstract": "TERMS-Bench is a diagnostic benchmark for evaluating LLM negotiation agents in multi-round bilateral price negotiation. Performance is decomposed along four independent axes — surplus efficiency, agreement calibration, opponent modeling, and procedural robustness — using a fixed, history-reactive counterpart policy that ensures reproducibility. Synthetic and data-grounded variants reveal failure modes invisible to deal-rate scoring alone.",
+  "links": {
+    "paper": "https://arxiv.org/abs/2605.13909",
+    "site": "https://terms-bench.github.io/"
+  }
+}

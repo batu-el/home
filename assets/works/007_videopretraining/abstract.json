@@ -1,0 +1,17 @@
+{
+  "title": "When Does Video Pretraining Help? Improving Embodied Navigation with Next-Frame Prediction",
+  "other": 8,
+  "year": 2025,
+  "month": 3,
+  "order": 1,
+  "authors": "Batu El",
+  "area": "reinforcement learning",
+  "tags": ["Stanford EE269 Project", "Signal Processing for ML"],
+  "abstract": "Examines when next-frame video pretraining transfers to embodied navigation. Identifies the regimes where video objectives accelerate learning of policies, and the regimes where they hurt by encoding spurious visual dynamics.",
+  "links": {
+    "paper": "paper_vptproject.pdf",
+    "code": "https://github.com/batu-el/when-vpt",
+    "site": "https://batu-el.github.io/when-vpt/",
+    "poster": "ee269-poster.pdf"
+  }
+}

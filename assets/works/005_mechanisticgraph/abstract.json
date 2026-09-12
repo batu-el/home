@@ -1,0 +1,16 @@
+{
+  "title": "Towards Mechanistic Interpretability of Graph Transformers via Attention Graphs",
+  "other": 11,
+  "year": 2025,
+  "month": 2,
+  "order": 2,
+  "authors": "Batu El, Deepro Choudhury, Pietro Liò, Chaitanya K. Joshi",
+  "area": "applied interpretability",
+  "tags": ["ICLR 2025 Workshop XAI4Science"],
+  "abstract": "We treat the attention patterns of a graph transformer as graphs themselves and use this view to study how these models route information. The attention-graph perspective surfaces interpretable circuits and predicts where graph transformers under- and over-rely on structural priors.",
+  "links": {
+    "paper": "https://arxiv.org/abs/2502.12352",
+    "code": "https://github.com/batu-el/understanding-inductive-biases-of-gnns",
+    "poster": "towards-mechanistic.pdf"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "title": "opportunities and risks of influencing intelligent agents",
+  "date": "Apr 2026",
+  "year": 2026,
+  "month": 4,
+  "order": 3,
+  "excerpt": "A technical perspective on what it means to influence an intelligent agent, when influence becomes hazardous, and how cognitive security gives us a unified framing.",
+  "content": "content.md",
+  "links": {
+    "paper": "works/002_cognitivesecurity/paper_cstf_position.pdf",
+    "fig1": "fig1_inverse_problem.png"
+  }
+}

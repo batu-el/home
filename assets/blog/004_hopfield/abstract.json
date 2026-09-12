@@ -1,0 +1,10 @@
+{
+  "title": "hopfield networks",
+  "date": "May 2026",
+  "year": 2026,
+  "month": 5,
+  "order": 1,
+  "excerpt": "a short note on hopfield networks: how energy landscapes borrowed from spin glasses become content-addressable memory, and why the same skeleton shows up again in modern attention.",
+  "content": "content.md",
+  "links": {}
+}

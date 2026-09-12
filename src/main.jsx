@@ -1,14 +1,20 @@
-// src/main.jsx
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import HomePage from './HomePage.jsx'  // Make sure the extension is included
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
+import Layout from './Layout.jsx'
+import Works from './pages/Works.jsx'
 import './index.css'
-
-// Add a console.log to verify the file is being executed
-console.log('Main.jsx is running')
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HomePage />
+    <HashRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Navigate to="/works" replace />} />
+          <Route path="/works" element={<Works />} />
+          <Route path="*" element={<Navigate to="/works" replace />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   </React.StrictMode>,
 )

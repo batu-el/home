@@ -1,0 +1,446 @@
+%
+%Academic CV LaTeX Template
+% Author: Dubasi Pavan Kumar
+% LinkedIn: https://www.linkedin.com/in/im-pavankumar/
+% License: MIT
+%
+% For errors, suggestions, or improvements, please contact:
+% Email: pavankumard.pg19.ma@nitp.ac.in
+%
+
+
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt} % Addressing fancyhdr warning
+
+% Hyperlink setup (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-1mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0mm}
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \text{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-0mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% Font options
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+
+\begin{document}
+\headerfontiii
+
+% Header
+\begin{center}
+    {\Huge\textbf{Batu El}}
+\end{center}
+\vspace{-5mm}
+
+\begin{center}
+    \small{
+    +1-650-785-9519 | \href{mailto:batuel@stanford.edu}{batuel@stanford.edu} | 
+    \href{https://batu-el.github.io/home/}{batu-el}} |
+    \socialicon{\faLinkedin} \href{https://www.linkedin.com/in/batu-el/}{batu-el} | 
+    \socialicon{\faGithub} \href{https://github.com/batu-el}{batu-el} 
+    \socialicon{\faTwitter} \href{https://twitter.com/elb4tu}{elb4tu} |
+    \small{Palo Alto, CA, USA}
+\end{center}
+\vspace{-4mm}
+
+% \begin{center}
+
+% \end{center}
+% \vspace{-4mm}
+% \begin{center}
+    
+% \end{center}
+
+% \vspace{-4mm}
+
+% \section{\textbf{Reserch Interest}}
+% \vspace{1mm}
+% \small{
+% Seeking a challenging position in [your field] to leverage my expertise in [your key skills]. Aiming to contribute to innovative projects at the intersection of [your interests] and practical problem-solving in fields such as [specific areas of interest].
+% }
+% \vspace{-2mm}
+
+\section{\textbf{Education}}
+\vspace{-0.4mm}
+
+\resumeSubheading
+{Stanford University}{Stanford, CA}
+{Ph.D. in Computational Mathematics  | GPA: 4.14/4.00 | Knight-Hennessy Scholar | advisor: \href{https://scholar.google.com/citations?user=23ZXZvEAAAAJ&hl=en}{James Zou}}{2024-present}
+\vspace{3mm}
+\resumeSubheading
+{University of Cambridge}{Cambridge, UK}
+{M.Phil. in Advanced Computer Science |  Distinction (85\%, ranked 5th) | Darwin College | advisor: \href{https://andreasvlachos.github.io/}{Andreas Vlachos} }{2023-2024}
+\vspace{3mm}
+\resumeSubheading
+{Tulane University}{New Orleans, LA}
+{B.S. \& B.A. in Mathematics; Computer Science; Economics | GPA: 4.00/4.00 |\href{https://college.tulane.edu/newcomb-tulane-college-announces-class-2022-william-wallace-peery-society}{valedictorian} | full-scholarship}{2018-2022}
+\vspace{3mm}
+% \resumeSubheading
+% {London School of Economics and Political Science}{London, UK}
+% {General Course (one-year-long exchange program) | Economics}{2020-2021}
+% \resumeSubheading
+% {Robert College of Istanbul}{ Istanbul, Turkiye}
+% {Nationally ranked in the top 0.02\% in Turkey’s nationwide high school placement exam among ~1,200,000 candidates}{2013-2018}
+
+\vspace{-4mm}
+
+\section{\textbf{Relevant Research}}
+\subsection*{\textit{Alignment and Social Impacts}}
+\vspace{-2mm}
+\resumeProject
+  {Moloch's Bargain: Emergent Misalignment When LLMs Compete for Audiences}
+  {Preprint | co-authors: James Zou}
+  {October, 2025}
+  {{}[\href{https://arxiv.org/abs/2510.06105}{\textcolor{darkblue}{\faGithub}}]}
+\resumeProject
+  {Position: AI Development Should Prioritize Cognitive Security}
+  {ICLR 2026 AIWILD Workshop | co-authors: Shiye Su*, Aneesh Pappu*, Peggy Yin*, Julie Heng*, Eric Heng, Ryan Wang, Andreas Haupt, James Zou}
+  {January, 2026}
+  {{}[\href{https://www.cstf.dev/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeProject
+  {Cost-of-Pass: An Economic Framework for Evaluating Language Models}
+  {ICLR 2026 | co-authors: Mehmet Hamza Erol, Mirac Suzgun, Mert Yuksekgonul, James Zou}
+  {January, 2026}
+  {{}[\href{https://arxiv.org/abs/2504.13359}{\textcolor{darkblue}{\faGithub}}]}
+\resumeProject
+  {BiTextion: Sociotechnical Alignment in Automated Optimization Modeling via Textual Bisection}
+  {Udell Lab Rotation | Advisor: Madeleine Udell}
+  {June, 2024}
+  {{}[\href{https://github.com/batu-el/bitextion}{\textcolor{darkblue}{\faGithub}}]}
+\vspace{-4mm}
+\subsection*{\textit{Multiagent Systems and Inference-time Techniques}}
+\vspace{-2mm}
+\resumeProject
+  {Inefficiencies of Meta Agents for Agent Design}
+  {EMNLP 2025 Findings, ICML 2025 PRAL Workshop | co-authors: Mert Yuksekgonul, James Zou}
+  {October, 2025}
+  {{}[\href{https://arxiv.org/abs/2510.06711}{\textcolor{darkblue}{\faGithub}}]}
+\resumeProject
+  {Multi-Agent Teams Hold Experts Back}
+  {ICML 2026 | co-authors: Aneesh Pappu, Hancheng Cao, Carmelo di Nolfo, Yanchao Sun, Meng Cao, James Zou}
+  {February, 2026}
+  {{}[\href{https://arxiv.org/abs/2602.01011}{\textcolor{darkblue}{\faGithub}}]}
+\resumeProject
+  {Bayesian Optimization for Guided Hypothesis Sampling in Minimum Bayes Risk Decoding}
+  {Preprint | co-authors: Julius Cheng, Andreas Vlachos}
+  {September, 2024}
+  {{}[\href{https://github.com/batu-el/guided-hypothesis-sampling}{\textcolor{darkblue}{\faGithub}}]}
+\vspace{-4mm}
+\subsection*{\textit{Reinforcement Learning}}
+\vspace{-2mm}
+\resumeProject
+  {When Does Video Pretraining Help? Improving Embodied Navigation with Next-Frame Prediction}
+  {project for \href{https://web.stanford.edu/class/ee269/}{Signal Processing and Quantization for Machine Learning (EE 269)}}
+  {March, 2025}
+  {{}[\href{https://github.com/batu-el/when-vpt}{\textcolor{darkblue}{\faGithub}}]}
+\resumeProject
+  {Reinforcement Learning Training for Dynamic Context Management in Mathematical Reasoning}
+  {project for \href{https://cs224r.stanford.edu/}{Deep Reinforcement Learning (CS224R)}}
+  {June, 2025}
+  {{}[\href{https://github.com/batu-el/TrainedMemory2}{\textcolor{darkblue}{\faGithub}}]}
+\vspace{-4mm}
+\subsection*{\textit{Applied Interpretability}}
+\vspace{-2mm}
+\resumeProject
+  {Understanding and Improving Representation Learning in the Presence of Shortcuts}
+  {MPhil Thesis at the University of Cambridge | Advisors: Andreas Vlachos, Michalis Korakakis}
+  {June, 2024}
+  {{}[\href{https://github.com/batu-el/understanding-shortcuts}{\textcolor{darkblue}{\faGithub}}]}
+\resumeProject
+  {Towards Mechanistic Interpretability of Graph Transformers via Attention Graphs}
+  {ICLR 2025 Workshop XAI4Science | co-authors: Deepro Choudhury, Pietro Liò, Chaitanya K. Joshi}
+  {February, 2025}
+  {{}[\href{https://arxiv.org/abs/2502.12352}{\textcolor{darkblue}{\faGithub}}]}
+\vspace{-4mm}
+\subsection*{\textit{ML Systems and State-Space Models}}
+\vspace{-2mm}
+\resumeProject
+  {Toward Faster Mamba Kernels: Performance Improvements and Hardware Limits}
+  {project for \href{https://cs217.stanford.edu/}{Hardware Accelerators for Machine Learning (CS 217)}}
+  {March, 2025}
+  {{}[\href{https://github.com/batu-el/faster-mamba}{\textcolor{darkblue}{\faGithub}}]}
+\vspace{-4mm}
+\subsection*{\textit{Other}}
+\vspace{-2mm}
+\resumeProject
+  {Parameterizing Chains in Generalized Fixed-Point-Free Involutions}
+  {Undergraduate Honors Thesis | Advisors: Michael Joyce, Mahir Can}
+  {May, 2022}
+  {{}[\href{https://github.com/batu-el/parameterizing-chains-in-generalized-involutions}{\textcolor{darkblue}{\faGithub}}]}
+\resumeProject
+  {Comparative Analysis of Constituency Parsers: A Case Study on Stanford U-PCFG and Berkeley Neural Parsers}
+  {Cambridge Coursework}
+  {December, 2023}
+  {{}[\href{https://github.com/batu-el/constituency-parser-comparison}{\textcolor{darkblue}{\faGithub}}]}
+\vspace{-4mm}
+\section{\textbf{Experience}}
+\vspace{-0.4mm}
+  \resumeSubheading
+      {{The World Bank [\href{https://treasury.worldbank.org/en/about/unit/treasury/reserve-advisory-management-partnership}{\faIcon{globe}}]}}{Washington DC, USA}
+      {Consultant - Reserve Advisory \& Management Partnership}{Aug 2022 - Sep 2023}
+       \vspace{2mm}
+        \textit{Managed the database and conducted data analysis for a \href{https://openknowledge.worldbank.org/entities/publication/3e23f0dd-7849-4a55-8ce7-2a104bef2c68}{survey} of 150 central banks; delivered presentations to central bankers; worked on yield curve modeling and environmental, social, and governance (ESG) metrics; developed fixed income portfolio optimization software.}
+       \vspace{2mm}
+
+\section{\textbf{Organizations}}
+\vspace{-0.4mm}
+  \resumeSubheading
+      {{Stanford Turkish Student Association [\href{https://stanford-turkish-student-association.github.io/home/}{\faIcon{globe}}]}}{Stanford, CA}
+      {President}{2025 - 2026}
+       \vspace{1mm}
+        \textit{Leading the student organization for Turkish students and friends of Turkey at Stanford --- community events, cultural programming, and the first \href{https://stanford-turkish-student-association.github.io/home/}{Turks in AI Forum} at Stanford University.}
+         \vspace{2mm}
+  \resumeSubheading
+      {{Cognitive Security Task Force [\href{https://www.cstf.dev/}{\faIcon{globe}}]}}{Stanford, CA}
+      {Co-Director}{2025 - present}
+     \vspace{1mm}
+      \textit{Research collective at Stanford HAI working on cognitive security --- the integrity of human attention, perception, memory, and judgment in the age of AI; bringing together perspectives from industry, policy, academia, and defense to develop standards and safeguards for human decision-making, sensemaking, and learning.}
+     \vspace{2mm}
+  \resumeSubheading
+      {{Intelligence Khollective [\href{https://knight-hennessy.stanford.edu/opportunities/intelligence-collective}{\faIcon{globe}}]}}{Stanford, CA}
+      {Co-Founder}{2025 - present}
+     \vspace{1mm}
+      \textit{KHeystone moonshot at Knight-Hennessy Scholars exploring how an artificial society could autonomously generate its own systems of knowledge and governance --- from foundational mathematics to legal structures --- publishing intermediate findings and running an interdisciplinary reading group.}
+     \vspace{2mm}
+
+\section{\textbf{Honors and Awards}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Knight-Hennessy Scholarship, Stanford University}
+  {Member of a multidisciplinary and multicultural scholars community}
+  {2024 Cohort}
+  {{}[\href{https://knight-hennessy.stanford.edu/people/batu-el}{\textcolor{darkblue}{\faIcon{globe}}}]}
+
+\resumeProject
+  {William Wallace Peery Medal for Academic Excellence, Tulane University}
+  {Tulane University’s top academic honor - valedictorian}
+  {2022}
+  {{}[\href{https://college.tulane.edu/newcomb-tulane-college-announces-class-2022-william-wallace-peery-society}{\textcolor{darkblue}{\faIcon{globe}}}]}
+
+\resumeProject
+  {J. Ernest Tanner Award for Excellence in Economics, Tulane University}
+  {Top student among the graduating economics majors at Tulane University}
+  {2022}
+  {{}[\href{https://liberalarts.tulane.edu/economics/news-events/awards/student-awards}{\textcolor{darkblue}{\faIcon{globe}}}]}
+  
+\resumeProject
+  {Glendy Burke Medal in Mathematics, Tulane University}
+  {Top student among the graduating mathematics majors at Tulane University}
+  {2022}
+
+\resumeProject
+  {Award for Academic Excellence in Computer Science, Tulane University}
+  {Top student among the graduating computer science majors at Tulane University}
+  {2022}
+
+\resumeProject
+  {The Award for Outstanding Capstone Project in Computer Science, Tulane University}
+  {Awarded for authoring a capstone project that is well-developed, technically sophisticated, relevant, and applicable}
+  {2022}
+
+\resumeProject
+  {The Senior Honors Scholar in Computer Science, Tulane University}
+  {Awarded to the honors thesis writer the department considers their very best based on contributions to the field of study}
+  {2022}
+
+\resumeProject
+  {Phi Beta Kappa, Academic Honor Society}
+  {In recognition of high attainments in liberal scholarship}
+  {2022}
+
+\resumeProject
+  {Omicron Delta Kappa, National Leadership Honor Society}
+  {In recognition of conspicuous attainments and service in collegiate activities}
+  {2021}
+
+\resumeProject
+  {Gordon Summer Fellowship, Tulane University}
+  {Largest grant given by Newcomb-Tulane College, to two outstanding students per spring semester}
+  {2021}
+
+\resumeProject
+  {Stacy Mandel Palagye and Keith Palagye Program for Middle East Peace}
+  {Five-week fully funded program provides an immersion in the Arab Israeli conflict through hands-on experience in Jerusalem}
+  {2020}
+  {{}[\href{https://liberalarts.tulane.edu/mena/study-abroad}{\textcolor{darkblue}{\faIcon{globe}}}]}
+
+\resumeProject
+  {Honors Summer Research Grant, Tulane University}
+  {The grant covers living expenses for six weeks during the summer to provide an opportunity to work on a scholarly project}
+  {2020}
+
+\resumeProject
+  {Tulane University Global Scholarship}
+  {Full-tuition scholarship throughout 4-year undergraduate career}
+  {2018-2022}
+
+\resumeProject
+  {Defne and Muhtar Kent Educational Foundation Scholarship }
+  {Scholarship partially covers housing expenses for four years}
+  {2018-2022}
+  {{}[\href{https://dmkedu.org/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+
+\resumeSubHeadingListEnd
+
+% \section{\textbf{References}}
+% \vspace{-0.2mm}
+% \small{
+% \begin{enumerate}[leftmargin=*,labelsep=2mm]
+% \item \textbf{Madeleine Udell}\\
+%    Assistant Professor, Management Science and Engineering\\
+%    Stanford University\\
+%    \textit{Relationship: Research Advisor, Instructor for Optimization}
+
+% \item \textbf{Andreas Vlachos}\\
+%    Professor, Computer Science and Technology\\
+%    University of Cambridge\\
+%    \textit{Relationship: MPhil Thesis Advisor, Instructor for Machine Learning for Language Processing}
+
+% \item \textbf{Mike Joyce}\\
+%    Professor of Practice, Mathematics\\
+%    Tulane University\\
+%    \textit{Relationship: Undergraduate Thesis Advisor, Instructor for Linear Algebra and Real Analysis}
+
+% \item \textbf{Eric Bouyé}\\
+%    Manager, Reserve Advisory \& Management Partnership (Products, Knowledge, and Research) \\
+%    The World Bank\\
+%    \textit{Relationship: Manager}
+% \end{enumerate}
+% }
+
+\end{document}

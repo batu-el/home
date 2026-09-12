@@ -1,0 +1,15 @@
+{
+  "title": "Comparative Analysis of Constituency Parsers: A Case Study on Stanford U-PCFG and Berkeley Neural Parsers",
+  "other": 14,
+  "year": 2023,
+  "month": 12,
+  "order": 2,
+  "authors": "Batu El",
+  "area": "other",
+  "tags": ["Cambridge Coursework", "old-school NLP"],
+  "abstract": "Bracketing F-score is a useful proxy of parser quality but hides where systems actually fail. This report combines quantitative and qualitative evaluation of the Berkeley Neural Parser (Kitaev & Klein, 2018; Kitaev et al., 2019) and the Stanford Unlexicalized PCFG Parser (Klein & Manning, 2003), characterizing their behavior on a designated test set across error types, precision/recall, and parsing time.",
+  "links": {
+    "paper": "paper-comparative-analysis-of-constituency-parsers.pdf",
+    "code": "https://github.com/batu-el/constituency-parser-comparison"
+  }
+}

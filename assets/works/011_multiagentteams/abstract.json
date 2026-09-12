@@ -1,0 +1,14 @@
+{
+  "title": "Multi-Agent Teams Hold Experts Back",
+  "other": 5,
+  "year": 2026,
+  "month": 2,
+  "order": 2,
+  "authors": "Aneesh Pappu, Batu El, Hancheng Cao, Carmelo di Nolfo, Yanchao Sun, Meng Cao, James Zou",
+  "area": "multiagent systems and inference time techniques",
+  "tags": ["ICML 2026"],
+  "abstract": "Self-organizing LLM teams consistently fail to match their expert agent's performance \u2014 even when explicitly told who the expert is \u2014 incurring losses of up to 37.6%. Decomposing the failure shows that expert leveraging, not identification, is the bottleneck: teams drift toward integrative compromise, averaging expert and non-expert views rather than weighting expertise. This consensus-seeking behavior also makes them more robust to adversarial agents, suggesting a trade-off between alignment and effective expertise utilization.",
+  "links": {
+    "paper": "https://arxiv.org/abs/2602.01011"
+  }
+}

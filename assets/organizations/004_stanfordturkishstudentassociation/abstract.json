@@ -1,0 +1,13 @@
+{
+  "title": "Stanford Turkish Student Association",
+  "venue": "Stanford University",
+  "year": 2025,
+  "month": 9,
+  "order": 1,
+  "role": "President",
+  "description": "Leading the student organization for Turkish students and friends of Turkey at Stanford \u2014 community events, cultural programming, and connecting students with the broader Turkish community on campus and beyond.",
+  "tags": ["Active"],
+  "links": {
+    "site": "https://stanford-turkish-student-association.github.io/home/"
+  }
+}
